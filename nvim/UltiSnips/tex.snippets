@@ -1,205 +1,166 @@
-priority -50
+# Math
 
-extends texmath
+snippet equation "Environment: Equation" b
+\begin{equation}
+	${0}
+\end{equation}
+endsnippet
 
-global !p
+snippet align "Environment: Align"
+\begin{align}
+	${0}
+\end{align}
+endsnippet
 
-def create_table(snip):
-	rows = snip.buffer[snip.line].split('x')[0]
-	cols = snip.buffer[snip.line].split('x')[1]
+snippet frac "Fraction" i
+\frac{${1:numer}}{${2:denom}}${0}
+endsnippet
 
-	int_val = lambda string: int(''.join(s for s in string if s.isdigit()))
-	
-	rows = int_val(rows)
-	cols = int_val(cols)
+snippet /\_\_/ "Subscript" riA
+_{$1}$0
+endsnippet
 
-	offset = cols + 1
-	old_spacing = snip.buffer[snip.line][:snip.buffer[snip.line].rfind('\t') + 1]
-	
-	snip.buffer[snip.line] = ''
-	
-	final_str = old_spacing + "\\begin{tabular}{|" + "|".join(['$' + str(i + 1) for i in range(cols)]) + "|}\n"
+snippet /\^\^/ "Superscript" riA
+^{$1}$0
+endsnippet
 
-	for i in range(rows):
-		final_str += old_spacing + '\t'
-		final_str += " & ".join(['$' + str(i * cols + j + offset) for j in range(cols)])
+# Commands and similar
 
-		final_str += " \\\\\\\n"
+snippet sec
+\section{$1}$0
+endsnippet
 
-	final_str += old_spacing + "\\end{tabular}\n$0"
+snippet sub
+\subsection{$1}$0
+endsnippet
 
-	snip.expand_anon(final_str)
+snippet subsub
+\subsubsection{$1}$0
+endsnippet
 
-def add_row(snip):
-	row_len = int(''.join(s for s in snip.buffer[snip.line] if s.isdigit()))
-	old_spacing = snip.buffer[snip.line][:snip.buffer[snip.line].rfind('\t') + 1]
+snippet " "Quotes" A
+\`\`${1:${VISUAL}}''${0}
+endsnippet
 
-	snip.buffer[snip.line] = ''
-	
-	final_str = old_spacing
-	final_str += " & ".join(['$' + str(j + 1) for j in range(row_len)])
-	final_str += " \\\\\\"
+snippet KYL "Colored KYL note" i
+{\color{green!50!black}KYL:}${0}
+endsnippet
 
-	snip.expand_anon(final_str)
+# Environments
 
-endglobal
-
-snippet "b(egin)?" "begin{} / end{}" br
-\begin{${1:something}}
-	${0:${VISUAL}}
+snippet begin
+\begin{${1:name}}
+	${0}
 \end{$1}
 endsnippet
 
-snippet abs "abstract environment" b
-\begin{abstract}
-	$0
-\end{abstract}
-endsnippet
-
-snippet tab "tabular / array environment" b
-\begin{${1:t}${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}{${2:c}}
-$0${2/(?<=.)(c|l|r)|./(?1: & )/g}
-\end{$1${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}
-endsnippet
-
-pre_expand "create_table(snip)"
-snippet "gentbl(\d+)x(\d+)" "Generate table of *width* by *height*" r  
-endsnippet
-
-pre_expand "add_row(snip)"
-snippet "tr(\d+)" "Add table row of dimension ..." r
-endsnippet
-
-snippet table "Table environment" b
-\begin{table}[${1:htpb}]
-	\centering
-	\caption{${2:caption}}
-	\label{tab:${3:label}}
-	\begin{${4:t}${4/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}{${5:c}}
-	$0${5/(?<=.)(c|l|r)|./(?1: & )/g}
-	\end{$4${4/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}
-\end{table}
-endsnippet
-
-snippet fig "Figure environment" b
-\begin{figure}[${2:htpb}]
-	\centering
-	\includegraphics[width=${3:0.8}\linewidth]{${4:name.ext}}
-	\caption{${4/(\w+)\.\w+/\u$1/}$0}
-	\label{fig:${4/(\w+)\.\w+/$1/}}
-\end{figure}
-endsnippet
-
-snippet enum "Enumerate" b
-\begin{enumerate}
-	\item $0
-\end{enumerate}
-endsnippet
-
-snippet item "Itemize" b
+snippet itemize
 \begin{itemize}
-	\item $0
+	\item ${0}
 \end{itemize}
 endsnippet
 
-snippet desc "Description" b
+snippet enumerate
+\begin{enumerate}
+	\item ${0}
+\end{enumerate}
+endsnippet
+
+snippet description
 \begin{description}
-	\item[$1] $0
+	\item[${1}] ${0}
 \end{description}
 endsnippet
 
-snippet it "Individual item" b
-\item $0
+snippet table
+\begin{table}
+	\centering
+	\caption{$1}
+	\label{tab:$2}
+	\begin{tabular}{$3}
+		\toprule
+		$4
+		\midrule
+		$0
+		\bottomrule
+	\end{tabular}
+\end{table}
 endsnippet
 
-snippet part "Part" b
-\part{${1:part name}}%
-\label{prt:${2:${1/(\w+)|\W+/(?1:\L$0\E:_)/ga}}}
-
-$0
+snippet figure
+\begin{figure}
+	\centering
+	\includegraphics[]{}
+	\caption{${0}}
+	\label{fig:${1}}
+\end{figure}
 endsnippet
 
-snippet cha "Chapter" b
-\chapter{${1:chapter name}}%
-\label{cha:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
-
-$0
+snippet pgfplot
+\begin{figure}[htpb]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				xlabel=labelx,
+				ylabel=labely,
+			]
+			\addplot[color=red,mark=x] ${0};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{${2}}
+	\label{fig:${1}}
+\end{figure}
 endsnippet
 
-snippet sec "Section" b
-\section{${1:section name}}%
-\label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
-
-$0
+snippet tikzpicture
+\begin{figure}[htpb]
+	\centering
+	\begin{tikzpicture}
+		${0}
+	\end{tikzpicture}
+	\caption{${2}}
+	\label{fig:${1}}
+\end{figure}
 endsnippet
 
-snippet sec* "Section" b
-\section*{${1:section name}}%
-\label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+# Document templates
+
+snippet templ-minimal "Template: Minimal" b
+\documentclass{minimal}
+\begin{document}
+
+Hello World!${0}
+
+\end{document}
+endsnippet
+
+snippet templ-article "Template: standard article" b
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+${1}
+
+\begin{document}
 
 ${0}
+
+\end{document}
 endsnippet
 
+snippet templ-tikz "Template: standalone Tikz figure" b
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\begin{document}
 
-snippet sub "Subsection" b
-\subsection{${1:subsection name}}%
-\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+\begin{tikzpicture}
+	[
+		thick
+	]
+	${0}
+\end{tikzpicture}
 
-$0
+\end{document}
 endsnippet
-
-snippet sub* "Subsection" b
-\subsection*{${1:subsection name}}%
-\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
-
-${0}
-endsnippet
-
-snippet ssub "Subsubsection" b
-\subsubsection{${1:subsubsection name}}%
-\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
-
-$0
-endsnippet
-
-snippet ssub* "Subsubsection" b
-\subsubsection*{${1:subsubsection name}}%
-\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
-
-${0}
-endsnippet
-
-snippet par "Paragraph" b
-\paragraph{${1:paragraph name}}%
-\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
-
-$0
-endsnippet
-
-snippet subp "Subparagraph" b
-\subparagraph{${1:subparagraph name}}%
-\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
-
-$0
-endsnippet
-
-snippet ni "Non-indented paragraph" b
-\noindent
-$0
-endsnippet
-
-snippet pac "Package" b
-\usepackage`!p snip.rv='[' if t[1] else ""`${1:options}`!p snip.rv = ']' if t[1] else ""`{${2:package}}$0
-endsnippet
-
-snippet lp "Long parenthesis"
-\left(${1:${VISUAL:contents}}\right)$0
-endsnippet
-
-snippet "mint(ed)?( (\S+))?" "Minted code typeset" br
-\begin{minted}{${1:`!p
-snip.rv = match.group(3) if match.group(2) is not None else "language"`}}
-${2:${VISUAL:code}}
-\end{minted}$0
-endsnippet
-# vim:ft=snippets:
