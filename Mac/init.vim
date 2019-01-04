@@ -48,15 +48,20 @@ Plug 'lervag/vimtex'
 Plug 'Konfekt/FastFold'
 Plug 'matze/vim-tex-fold'
 
+" Languague
+Plug 'dpelle/vim-LanguageTool'
+
+" Theme
+Plug 'morhetz/gruvbox'
+
 " Plugin: Completion and snippets
 if has('nvim') || v:version >= 800
     Plug 'Shougo/deoplete.nvim',
                 \ has('nvim') ? { 'do': ':UpdateRemotePlugins' } : {}
 endif
-Plug 'roxma/vim-hug-neovim-rpc', has('nvim') ? { 'on' : [] } : {}
 Plug 'roxma/nvim-yarp'
-Plug 'Shougo/neoinclude.vim'
-Plug 'Shougo/neco-vim'
+"Plug 'Shougo/neoinclude.vim'
+"Plug 'Shougo/neco-vim'
 Plug 'Shougo/neco-syntax'
 Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-ultisnips'
@@ -64,13 +69,13 @@ Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-vim'
-Plug 'ncm2/ncm2-neoinclude'
-Plug 'ncm2/ncm2-rst-subscope'
-Plug 'ncm2/ncm2-markdown-subscope'
-Plug 'ncm2/ncm2-html-subscope'
-Plug 'ncm2/ncm2-vim-lsp'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
+"Plug 'ncm2/ncm2-neoinclude'
+"Plug 'ncm2/ncm2-rst-subscope'
+"Plug 'ncm2/ncm2-markdown-subscope'
+"Plug 'ncm2/ncm2-html-subscope'
+"Plug 'ncm2/ncm2-vim-lsp'
+"Plug 'prabirshrestha/async.vim'
+"Plug 'prabirshrestha/vim-lsp'
 
 " Track the engine.
 Plug 'SirVer/ultisnips'
@@ -84,8 +89,12 @@ Plug 'Chiel92/vim-autoformat'
 
 call plug#end()
 
+colorscheme gruvbox
+
 " vim-autoformat
 noremap <F3> :Autoformat<CR>
+
+:let g:languagetool_jar='$HOME/git/languagetool/LanguageTool-4.3-stable/languagetool-commandline.jar'
 
 "  Latex
 let g:tex_flavor='latex' "Use vim-latex even when *.tex file is newcreated)
@@ -108,12 +117,14 @@ let g:vimtex_view_method = 'skim'
 let g:vimtex_compiler_progname = 'nvr'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
+let g:latex_fold_preamble = 1
 let g:polyglot_disabled = ['latex']
+let g:latex_quickfix_mode = 0
 
 " Snippets
 " " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<s-tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsExpandTrigger="<F2>"
+let g:UltiSnipsJumpForwardTrigger="<F2>"
 let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom_snips"]
 inoremap <c-c> <ESC>
@@ -124,7 +135,7 @@ inoremap <c-c> <ESC>
 
 " Use <TAB> to select the popup menu:
 inoremap <expr><tab>   pumvisible() ? "\<c-n>" : "\<tab>"
-inoremap <expr><c-k> pumvisible() ? "\<c-p>" : "\<c-k>"
+inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
 au BufEnter * call ncm2#enable_for_buffer()
 au User Ncm2Plugin call ncm2#register_source({
