@@ -32,10 +32,11 @@
 \RequirePackage[leqno]{amsmath}
 \RequirePackage{amssymb,amsopn,amsthm,bm,mathrsfs}
 \RequirePackage{mathtools}
+\RequirePackage{accents}
 
 % Convenience
 \ifGI@minimal\else
-  \RequirePackage{cite,indentfirst}
+%  \RequirePackage{cite,indentfirst}
   \RequirePackage{xspace,centernot,paralist}
   \RequirePackage{etoolbox}
 \fi
@@ -202,6 +203,9 @@
 \newcommand{\E}{\bm{E}}
 \renewcommand{\P}{\bm{P}}
 \newcommand{\one}{\bm{1}}
+\newcommand{\interior}[1]{%
+  {\kern0pt#1}^{\mathrm{o}}%
+}
 
 \DeclareMathOperator{\erf}{erf}
 \DeclareMathOperator{\sign}{sign}
@@ -210,6 +214,7 @@
 \DeclareMathOperator{\trace}{tr}
 \DeclareMathOperator{\Lip}{Lip}
 \DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
 
 \renewcommand{\epsilon}{\varepsilon}
 \renewcommand{\leq}{\leqslant}
@@ -224,8 +229,7 @@
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\T}{\mathbb{T}}
-
-
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
 %
 % Test if we're in a display or not
 %
