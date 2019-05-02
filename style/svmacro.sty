@@ -1,26 +1,26 @@
-\ProvidesPackage{gimac}
-% Misc. macros for Gautam Iyer.
-% Last modified: Fri 05 Oct 2018 12:35:02 PM EDT
+\ProvidesPackage{svmacro}
+% Misc. macros for Truong-Son Van (courtesy by Gautam Iyer).
+% 2019-05-02 00:12
 
-\newif\ifGI@exam
-\@ifclassloaded{exam}{\GI@examtrue}{\GI@examfalse}
-\newif\ifGI@amsbook
-\@ifclassloaded{amsbook}{\GI@amsbooktrue}{\GI@amsbookfalse}
+\newif\ifSV@exam
+\@ifclassloaded{exam}{\SV@examtrue}{\SV@examfalse}
+\newif\ifSV@amsbook
+\@ifclassloaded{amsbook}{\SV@amsbooktrue}{\SV@amsbookfalse}
 
 % If's for options
-\newif\ifGI@draft\GI@draftfalse
-\newif\ifGI@twocolumn\GI@twocolumnfalse
-\newif\ifGI@tablet\GI@tabletfalse
-\newif\ifGI@minimal\GI@minimalfalse
+\newif\ifSV@draft\SV@draftfalse
+\newif\ifSV@twocolumn\SV@twocolumnfalse
+\newif\ifSV@tablet\SV@tabletfalse
+\newif\ifSV@minimal\SV@minimalfalse
 
-\DeclareOption{draft}{\GI@drafttrue}
-\DeclareOption{twocolumn}{\GI@twocolumntrue}
-\DeclareOption{tablet}{\GI@tablettrue}
-\DeclareOption{minimal}{\GI@minimaltrue}
+\DeclareOption{draft}{\SV@drafttrue}
+\DeclareOption{twocolumn}{\SV@twocolumntrue}
+\DeclareOption{tablet}{\SV@tablettrue}
+\DeclareOption{minimal}{\SV@minimaltrue}
 \ProcessOptions
 
 % Fonts and fixes
-\ifGI@minimal\else
+\ifSV@minimal\else
   \RequirePackage{lmodern}
   \RequirePackage[T1]{fontenc}
   \RequirePackage[final]{microtype}
@@ -35,15 +35,15 @@
 \RequirePackage{accents}
 
 % Convenience
-\ifGI@minimal\else
+\ifSV@minimal\else
 %  \RequirePackage{cite,indentfirst}
   \RequirePackage{xspace,centernot,paralist}
   \RequirePackage{etoolbox}
 \fi
 \RequirePackage{suffix}
 
-\ifGI@draft\setlength{\overfullrule}{1mm}\fi
-\ifGI@twocolumn
+\ifSV@draft\setlength{\overfullrule}{1mm}\fi
+\ifSV@twocolumn
   % 2 Column mode to save trees. Margins chosen so that linewidth here is the
   % same as amsart, one column with default margins on US letter paper, so
   % that no overfull hboxes are created / destroyed.
@@ -58,7 +58,7 @@
   \geometry{landscape,includehead,headheight=12pt,headsep=10pt,left=\columnsep,right=\columnsep,top=12.98999pt,bottom=\columnsep}
   \twocolumn
 
-  \ifGI@amsbook\ifGI@minimal\else
+  \ifSV@amsbook\ifSV@minimal\else
     % Don't force a new double page for every chapter.
     \patchcmd{\chapter}{\clearpage}{\newpage}{}{\error}
 
@@ -68,12 +68,12 @@
     % No newpage after title
     %\patchcmd{\@maketitle}{\newpage}{}{}{}
   \fi\fi
-\else\ifGI@tablet%ifGI@twocolumn
+\else\ifSV@tablet%ifSV@twocolumn
   \RequirePackage{geometry}
   \geometry{paperheight=638pt,paperwidth=400pt,left=20pt,right=20pt,top=10pt,bottom=10pt,includehead,includefoot}
-\else%ifGI@tablet
+\else%ifSV@tablet
   %\usepackage[body={16.65cm,22.65cm}]{geometry}
-  \ifGI@draft
+  \ifSV@draft
     % Should be done before loading showkeys
     \providecommand*{\showkeyslabelformat}[1]{%
       \fcolorbox{blue!50!black}{cyan!5!white}{%
@@ -84,9 +84,9 @@
       }
     }
     \RequirePackage[notref,notcite]{showkeys}
-  \fi%ifGI@draft
-\fi\fi%else ifGI@tablet, ifGI@twocolumn
-\ifGI@minimal\else
+  \fi%ifSV@draft
+\fi\fi%else ifSV@tablet, ifSV@twocolumn
+\ifSV@minimal\else
   % Make AMS section titles less ugly
   \@ifclassloaded{amsart}{%
     \patchcmd{\section}{\scshape\centering}{\bfseries\large}{}{}
@@ -120,17 +120,17 @@
 %
 % Theorems, Lemmas etc.
 %
-\newif\ifGI@numwithin
-\GI@numwithinfalse
-\ifcsname c@section\endcsname\GI@numwithintrue\fi
-\ifGI@exam\GI@numwithinfalse\fi
-\ifGI@numwithin\numberwithin{equation}{section}\fi
+\newif\ifSV@numwithin
+\SV@numwithinfalse
+\ifcsname c@section\endcsname\SV@numwithintrue\fi
+\ifSV@exam\SV@numwithinfalse\fi
+\ifSV@numwithin\numberwithin{equation}{section}\fi
 
 \ifcsname theorem\endcsname\else
   % Some document classes define their own theorems.
   % Only do these if no theorem environment is present.
   \theoremstyle{plain}
-  \ifGI@numwithin
+  \ifSV@numwithin
     \newtheorem{theorem}{Theorem}[section]
   \else
     \newtheorem{theorem}{Theorem}
@@ -154,7 +154,7 @@
   \newtheorem*{remark*}{Remark}
   \newtheorem{example}[theorem]{Example}
 
-  \ifGI@exam\else\newtheorem{problem}{Problem}[section]\fi
+  \ifSV@exam\else\newtheorem{problem}{Problem}[section]\fi
 \fi
 
 % Misc. theorems. (Uses optional argument as name.)
@@ -181,13 +181,13 @@
 %
 % Proof steps
 %
-\newcounter{GICase}\setcounter{GICase}{0}
-\newenvironment{proofcases}{\setcounter{GICase}{0}}{}
-\newcommand{\case}[1][\relax]{\smallskip\par\noindent\stepcounter{GICase}\emph{Case \Roman{GICase}: \ifx#1\relax\relax\else#1.\fi}}
+\newcounter{SVCase}\setcounter{SVCase}{0}
+\newenvironment{proofcases}{\setcounter{SVCase}{0}}{}
+\newcommand{\case}[1][\relax]{\smallskip\par\noindent\stepcounter{SVCase}\emph{Case \Roman{SVCase}: \ifx#1\relax\relax\else#1.\fi}}
 
-\newcounter{GIStep}\setcounter{GIStep}{0}
-\newenvironment{proofsteps}{\setcounter{GIStep}{0}}{}
-\newcommand{\step}[1][\relax]{\smallskip\par\noindent\stepcounter{GIStep}\emph{Step \arabic{GIStep}: \ifx#1\relax\relax\else#1.\fi}}
+\newcounter{SVStep}\setcounter{SVStep}{0}
+\newenvironment{proofsteps}{\setcounter{SVStep}{0}}{}
+\newcommand{\step}[1][\relax]{\smallskip\par\noindent\stepcounter{SVStep}\emph{Step \arabic{SVStep}: \ifx#1\relax\relax\else#1.\fi}}
 
 %
 % Symbols and notation
@@ -230,12 +230,19 @@
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\T}{\mathbb{T}}
 \newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+\newcommand\pr{\mathbb{P}} 
+\newcommand\eps{\varepsilon}
+\newcommand\cM{\mathcal{M}} \newcommand\cA{\mathcal{A}}
+\newcommand\cC{\mathcal{C}} \newcommand\cV{\mathcal{V}}
+\newcommand\cB{\mathcal{B}} \newcommand\cX{\mathcal{X}} 
+\newcommand\cY{\mathcal{Y}} \newcommand\cD{\mathcal{D}}
+\newcommand\cE{\mathcal{E}} \newcommand\cP{\mathcal{P}}
 %
 % Test if we're in a display or not
 %
-%\newif\ifGI@textstyle
-%\GI@textstyletrue
-%\everydisplay\expandafter{\the\everydisplay\GI@textstylefalse}
+%\newif\ifSV@textstyle
+%\SV@textstyletrue
+%\everydisplay\expandafter{\the\everydisplay\SV@textstylefalse}
 
 %
 % Norms and parenthesis
@@ -248,9 +255,9 @@
 
 % Work around mathtools bug that should be fixed in later versions.
 % https://tex.stackexchange.com/questions/366665/missing-middle-delimiters-when-redeclarepaireddelimiterinnerwrapper-is-used
-\newif\ifGI@NeedsMathToolsFix
-\@ifpackagelater{mathtools}{2015/11/13}{\GI@NeedsMathToolsFixfalse}{\GI@NeedsMathToolsFixtrue}
-\ifGI@NeedsMathToolsFix
+\newif\ifSV@NeedsMathToolsFix
+\@ifpackagelater{mathtools}{2015/11/13}{\SV@NeedsMathToolsFixfalse}{\SV@NeedsMathToolsFixtrue}
+\ifSV@NeedsMathToolsFix
   \MHInternalSyntaxOn
   \def\MHempty{}
   \def\DeclarePairedDelimiterX#1[#2]#3#4#5{%
@@ -331,19 +338,19 @@
 \newdelim{\floor}{\lfloor}{\rfloor}
 \newdelim{\ceil}{\lceil}{\rceil}
 
-\newcommand{\GI@given}[1]{\nonscript\:\mathopen{}#1\vert\nonscript\:\mathopen{}}
-\newcommand{\given}[1][]{\GI@given{#1}}
+\newcommand{\SV@given}[1]{\nonscript\:\mathopen{}#1\vert\nonscript\:\mathopen{}}
+\newcommand{\given}[1][]{\SV@given{#1}}
 \newdelimX\paren[1]{(}{)}{%
-  \renewcommand{\given}{\GI@given{\delimsize}}#1%
+  \renewcommand{\given}{\SV@given{\delimsize}}#1%
 }
 \newdelimX\brak[1]{[}{]}{%
-  \renewcommand{\given}{\GI@given{\delimsize}}#1%
+  \renewcommand{\given}{\SV@given{\delimsize}}#1%
 }
 
-\newcommand{\GI@st}[1]{\nonscript\:#1\vert\nonscript\:\mathopen{}\allowbreak}
-\newcommand{\st}[1][]{\GI@st{#1}}
+\newcommand{\SV@st}[1]{\nonscript\:#1\vert\nonscript\:\mathopen{}\allowbreak}
+\newcommand{\st}[1][]{\SV@st{#1}}
 \newdelimX\set[1]\{\}{%
-  \renewcommand{\st}{\GI@st{\delimsize}}#1%
+  \renewcommand{\st}{\SV@st{\delimsize}}#1%
 }
 
 \newdelim{\abs}{\lvert}{\rvert}
@@ -353,7 +360,7 @@
 
 %\newcommand{\ip}[3][]{\av[#1]{#2,#3}}
 %\WithSuffix\newcommand\ip*[2]{\av{#1,#2}}
-%\newcommand{\at}[2][\Bigr]{\ifGI@textstyle|\else#1|_{#2}}
+%\newcommand{\at}[2][\Bigr]{\ifSV@textstyle|\else#1|_{#2}}
 %\WithSuffix\newcommand\at*[1]{\middle|_{#1}}
 
 \newcommand{\defeq}{\stackrel{\scriptscriptstyle\textup{def}}{=}}
