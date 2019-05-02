@@ -38,9 +38,11 @@ set smartcase
 set infercase
 set showmatch
 
+filetype plugin indent on
+
 syntax on
-filetype off " required
-"filetype plugin indent on
+
+" filetype off "required
 
 call plug#begin('~/.local/share/nvim/plugged')
 " Plugins
@@ -50,6 +52,9 @@ Plug 'matze/vim-tex-fold'
 
 " Languague
 Plug 'dpelle/vim-LanguageTool'
+
+" Linting
+Plug 'w0rp/ale'
 
 " Theme
 Plug 'morhetz/gruvbox'
@@ -120,6 +125,7 @@ let g:vimtex_view_general_options_latexmk = '--unique'
 let g:latex_fold_preamble = 1
 let g:polyglot_disabled = ['latex']
 let g:latex_quickfix_mode = 0
+let g:vimtex_syntax_enable = 0 
 
 " Snippets
 " " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
@@ -136,6 +142,7 @@ inoremap <c-c> <ESC>
 " Use <TAB> to select the popup menu:
 inoremap <expr><tab>   pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 au BufEnter * call ncm2#enable_for_buffer()
 au User Ncm2Plugin call ncm2#register_source({
