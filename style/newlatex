@@ -1,0 +1,9 @@
+#!/bin/bash
+name=$1
+if [ -z "${name}" ]
+then
+  echo "You need to give a name for your new file"
+else
+  cp ~/LaTexStyle/* ./
+  mv newfile.tex "${name}"
+fi
