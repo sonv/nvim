@@ -1,9 +1,17 @@
 #!/bin/bash
 name=$1
-if [ -z "${name}" ]
+option=$2
+if [ -z "${name}" ] || [ -z "$option}" ]
 then
-  echo "You need to give a name for your new file"
+  echo "Usage: newlatex [name] [option]. Option 1 for everything new; option 2 for one new tex file."
 else
-  cp ~/LaTexStyle/* ./
-  mv newfile.tex "${name}"
+  case $option in
+    1)
+      cp ~/LaTexStyle/* ./
+      mv newfile.tex "${name}"
+      ;;
+    2)
+      cp ~/LaTexStyle/newfile.tex "${name}"
+      ;;
+  esac
 fi
