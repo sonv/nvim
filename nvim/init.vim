@@ -5,7 +5,7 @@ set tabstop=4 shiftwidth=4
 set expandtab
 set iskeyword+=:
 set wrap linebreak nolist
-set tw=79
+"set tw=79
 set colorcolumn=80
 " Indentation
 set softtabstop=-1
@@ -39,8 +39,10 @@ set smartcase
 set infercase
 set showmatch
 
+filetype plugin indent on
 syntax on
-filetype off " required
+
+"filetype off " required
 "filetype plugin indent on
 
 call plug#begin('~/.local/share/nvim/plugged')
@@ -53,7 +55,17 @@ Plug 'matze/vim-tex-fold'
 Plug 'dpelle/vim-LanguageTool'
 
 " Theme
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
+Plug 'haishanh/night-owl.vim'
+
+" If you have vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+
+
+
 
 " Plugin: Completion and snippets
 if has('nvim') || v:version >= 800
@@ -70,6 +82,7 @@ Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-vim'
+Plug 'tpope/vim-fugitive'
 "Plug 'ncm2/ncm2-neoinclude'
 "Plug 'ncm2/ncm2-rst-subscope'
 "Plug 'ncm2/ncm2-markdown-subscope'
@@ -84,13 +97,16 @@ Plug 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 
+" Linter
+Plug 'w0rp/ale'
+
 
 " Formater
 Plug 'Chiel92/vim-autoformat'
 
 call plug#end()
 
-colorscheme gruvbox
+colorscheme night-owl 
 
 " vim-autoformat
 noremap <F3> :Autoformat<CR>
@@ -120,8 +136,7 @@ let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
 let g:latex_fold_preamble = 1
 let g:polyglot_disabled = ['latex']
-let g:latex_quickfix_mode = 0
-
+let g:vimtex_quickfix_autoclose_after_keystrokes = 2 
 " Snippets
 " " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<F2>"
@@ -137,6 +152,10 @@ inoremap <c-c> <ESC>
 " Use <TAB> to select the popup menu:
 inoremap <expr><tab>   pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+
+" Use <F4> to auto complete deimeter in latex
+imap <F4> <plug>(vimtex-delim-close)
+
 
 au BufEnter * call ncm2#enable_for_buffer()
 au User Ncm2Plugin call ncm2#register_source({
@@ -159,4 +178,5 @@ au User Ncm2Plugin call ncm2#register_source({
 
 
 "" Setup deoplete
-
+"" Setup oni
+let g:gui_oni = 1 
