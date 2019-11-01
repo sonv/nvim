@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 name=$1
 option=$2
 if [ -z "${name}" ] || [ -z "$option}" ]
