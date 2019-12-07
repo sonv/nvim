@@ -7,7 +7,7 @@ then
 else
   case $option in
     1)
-      cp ~/LaTexStyle/* ./
+      cp ~/lib/LatexStyle/* ./
       mv newfile.tex "${name}"
       ;;
     2)
