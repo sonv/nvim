@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "coc-json": ">=1.2.4",
+    "coc-pairs": ">=1.2.20",
+    "coc-snippets": ">=2.1.18",
+    "coc-vimtex": ">=1.0.2",
+    "latex-snippets": "https://github.com/sabertazimi/LaTeX-snippets"
+  }
+}

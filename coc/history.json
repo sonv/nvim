@@ -1,0 +1,28 @@
+{
+  "lists": {
+    "%2Fhome%2Fsonv%2FWork%2FIyer_Van%2FAsymptotics": [
+      "tex"
+    ],
+    "%2Fhome%2Fsonv%2FWork": [
+      "sni",
+      "servi"
+    ]
+  },
+  "extensions": {
+    "%2Fhome%2Fsonv%2FWork%2FIyer_Van%2FAsymptotics": [
+      "sni:q",
+      ":q"
+    ]
+  },
+  "snippets": {
+    "%2Fhome%2Fsonv%2FWork%2FIyer_Van%2FAsymptotics": [
+      "latexq",
+      "la",
+      ":q",
+      "qk"
+    ],
+    "%2Fhome%2Fsonv%2FWork": [
+      ":q"
+    ]
+  }
+}
