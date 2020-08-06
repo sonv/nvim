@@ -1,3 +1,4 @@
+% Encoding: UTF-8
 
 @article{AcerbiChiadoPiatDalMasoPercivale1992,
   title = {An Extension Theorem from Connected Sets, and Homogenization in General Periodic Domains},
@@ -417,15 +418,15 @@
   number = {3}
 }
 
-@book{Bacaer2011,
-  title = {A Short History of Mathematical Population Dynamics},
-  author = {Baca\"er, Nicolas},
-  date = {2011},
+@Book{Bacaeer2011,
+  author    = {Baca\"er, Nicolas},
+  date      = {2011},
+  title     = {A Short History of Mathematical Population Dynamics},
+  doi       = {10.1007/978-0-85729-115-8},
+  isbn      = {978-0-85729-114-1},
+  pagetotal = {x+160},
   publisher = {{Springer-Verlag London, Ltd., London}},
-  doi = {10.1007/978-0-85729-115-8},
-  isbn = {978-0-85729-114-1},
-  mrnumber = {2744666 (2011j:01001)},
-  pagetotal = {x+160}
+  mrnumber  = {2744666 (2011j:01001)},
 }
 
 @article{Baehr2010,
@@ -572,31 +573,31 @@
   mrnumber = {2355417 (2008f:76017)}
 }
 
-@article{BarlowCerny2011,
-  title = {Convergence to Fractional Kinetics for Random Walks Associated with Unbounded Conductances},
-  author = {Barlow, Martin T. and {\v C}ern\'y, Ji{\v r}\'i},
-  date = {2011},
+@Article{BarlowvCerny2011,
+  author       = {Barlow, Martin T. and {\v C}ern\'y, Ji{\v r}\'i},
+  date         = {2011},
   journaltitle = {Probability Theory and Related Fields},
+  title        = {Convergence to Fractional Kinetics for Random Walks Associated with Unbounded Conductances},
+  doi          = {10.1007/s00440-009-0257-z},
+  issn         = {0178-8051},
+  number       = {3-4},
+  pages        = {639--673},
+  volume       = {149},
+  mrnumber     = {2776627 (2012d:60091)},
   shortjournal = {Probab. Theory Related Fields},
-  volume = {149},
-  pages = {639--673},
-  issn = {0178-8051},
-  doi = {10.1007/s00440-009-0257-z},
-  mrnumber = {2776627 (2012d:60091)},
-  number = {3-4}
 }
 
-@article{Basset1886,
-  title = {On the {{Motion}} of {{Two Spheres}} in a {{Liquid}}, and {{Allied Problems}}},
-  author = {Basset, A. B.},
-  date = {1886/0087},
+@Article{Basset87,
+  author       = {Basset, A. B.},
+  date         = {1886/0087},
   journaltitle = {Proceedings of the London Mathematical Society},
+  title        = {On the {{Motion}} of {{Two Spheres}} in a {{Liquid}}, and {{Allied Problems}}},
+  doi          = {10.1112/plms/s1-18.1.369},
+  issn         = {0024-6115},
+  pages        = {369--377},
+  volume       = {18},
+  mrnumber     = {1575165},
   shortjournal = {Proc. Lond. Math. Soc.},
-  volume = {18},
-  pages = {369--377},
-  issn = {0024-6115},
-  doi = {10.1112/plms/s1-18.1.369},
-  mrnumber = {1575165}
 }
 
 @incollection{BassKhoshnevisan1993,
@@ -665,67 +666,67 @@
   number = {3}
 }
 
-@article{BedrossianCotiZelatiGlatt-Holtz2016,
-  title = {Invariant Measures for Passive Scalars in the Small Noise Inviscid Limit},
-  author = {Bedrossian, Jacob and Coti Zelati, Michele and Glatt-Holtz, Nathan},
-  date = {2016},
+@Article{BedrossianCotiZelatiGlattHoltz2016,
+  author       = {Bedrossian, Jacob and Coti Zelati, Michele and Glatt-Holtz, Nathan},
+  date         = {2016},
   journaltitle = {Communications in Mathematical Physics},
+  title        = {Invariant Measures for Passive Scalars in the Small Noise Inviscid Limit},
+  doi          = {10.1007/s00220-016-2758-9},
+  issn         = {0010-3616},
+  number       = {1},
+  pages        = {101--127},
+  volume       = {348},
+  mrnumber     = {3551262},
   shortjournal = {Comm. Math. Phys.},
-  volume = {348},
-  pages = {101--127},
-  issn = {0010-3616},
-  doi = {10.1007/s00220-016-2758-9},
-  mrnumber = {3551262},
-  number = {1}
 }
 
-@article{Ben-Artzi1994,
-  title = {Global Solutions of Two-Dimensional {{Navier}}-{{Stokes}} and {{Euler}} Equations},
-  author = {Ben-Artzi, Matania},
-  date = {1994},
+@Article{BenArtzi1994,
+  author       = {Ben-Artzi, Matania},
+  date         = {1994},
   journaltitle = {Archive for Rational Mechanics and Analysis},
+  title        = {Global Solutions of Two-Dimensional {{Navier}}-{{Stokes}} and {{Euler}} Equations},
+  issn         = {0003-9527},
+  number       = {4},
+  pages        = {329--358},
+  volume       = {128},
   shortjournal = {Arch. Rational Mech. Anal.},
-  volume = {128},
-  pages = {329--358},
-  issn = {0003-9527},
-  number = {4}
 }
 
-@article{Ben-NaimKrapivsky2011,
-  title = {Kinetics of Ring Formation},
-  author = {Ben-Naim, E. and Krapivsky, P. L.},
-  date = {2011-06},
+@Article{BenNaimKrapivsky2011,
+  author       = {Ben-Naim, E. and Krapivsky, P. L.},
+  date         = {2011-06},
   journaltitle = {Physical Review E},
-  volume = {83},
-  pages = {061102},
-  doi = {10.1103/PhysRevE.83.061102},
-  number = {6}
+  title        = {Kinetics of Ring Formation},
+  doi          = {10.1103/PhysRevE.83.061102},
+  number       = {6},
+  pages        = {061102},
+  volume       = {83},
 }
 
-@article{BenArousCabezasCernyRoyfman2015,
-  title = {Randomly Trapped Random Walks},
-  author = {Ben Arous, G\'erard and Cabezas, Manuel and {\v C}ern\'y, Ji{\v r}\'i and Royfman, Roman},
-  date = {2015-09},
+@Article{BenArousCabezasvCernyRoyfman2015,
+  author       = {Ben Arous, G\'erard and Cabezas, Manuel and {\v C}ern\'y, Ji{\v r}\'i and Royfman, Roman},
+  date         = {2015-09},
   journaltitle = {The Annals of Probability},
+  title        = {Randomly Trapped Random Walks},
+  doi          = {10.1214/14-AOP939},
+  number       = {5},
+  pages        = {2405--2457},
+  volume       = {43},
   shortjournal = {Ann. Probab.},
-  volume = {43},
-  pages = {2405--2457},
-  doi = {10.1214/14-AOP939},
-  number = {5}
 }
 
-@article{BenArousCerny2007,
-  title = {Scaling Limit for Trap Models on \$\textbackslash{}mathbb {{Z}}\^d\$},
-  author = {Ben Arous, G\'erard and {\v C}ern\'y, Ji{\v r}\'i},
-  date = {2007},
+@Article{BenArousvCerny2007,
+  author       = {Ben Arous, G\'erard and {\v C}ern\'y, Ji{\v r}\'i},
+  date         = {2007},
   journaltitle = {The Annals of Probability},
+  title        = {Scaling Limit for Trap Models on \$\textbackslash{}mathbb {{Z}}\^d\$},
+  doi          = {10.1214/009117907000000024},
+  issn         = {0091-1798},
+  number       = {6},
+  pages        = {2356--2384},
+  volume       = {35},
+  mrnumber     = {2353391 (2009e:60219)},
   shortjournal = {Ann. Probab.},
-  volume = {35},
-  pages = {2356--2384},
-  issn = {0091-1798},
-  doi = {10.1214/009117907000000024},
-  mrnumber = {2353391 (2009e:60219)},
-  number = {6}
 }
 
 @article{BensonWheatcraftMeerschaert2000,
@@ -830,13 +831,13 @@
   pagetotal = {xxiv+824}
 }
 
-@article{Bergstrom1952,
-  title = {On Some Expansions of Stable Distribution Functions},
-  author = {Bergstr\"om, Harald},
-  date = {1952},
+@Article{Bergstroem1952,
+  author       = {Bergstr\"om, Harald},
+  date         = {1952},
   journaltitle = {Ark. Mat.},
-  volume = {2},
-  pages = {375--378}
+  title        = {On Some Expansions of Stable Distribution Functions},
+  pages        = {375--378},
+  volume       = {2},
 }
 
 @book{BerlineGetzlerVergne1992,
@@ -1123,17 +1124,17 @@
   number = {2}
 }
 
-@article{BirknerBlathCapaldoEtheridgeMohleSchweinsbergWakolbinger2005,
-  title = {Alpha-Stable Branching and Beta-Coalescents},
-  author = {Birkner, Matthias and Blath, Jochen and Capaldo, Marcella and Etheridge, Alison and M\"ohle, Martin and Schweinsberg, Jason and Wakolbinger, Anton},
-  date = {2005},
+@Article{BirknerBlathCapaldoEtheridgeMoehleSchweinsbergWakolbinger2005,
+  author       = {Birkner, Matthias and Blath, Jochen and Capaldo, Marcella and Etheridge, Alison and M\"ohle, Martin and Schweinsberg, Jason and Wakolbinger, Anton},
+  date         = {2005},
   journaltitle = {Electronic Journal of Probability},
+  title        = {Alpha-Stable Branching and Beta-Coalescents},
+  doi          = {10.1214/EJP.v10-241},
+  issn         = {1083-6489},
+  pages        = {no. 9, 303--325},
+  volume       = {10},
+  mrnumber     = {2120246},
   shortjournal = {Electron. J. Probab.},
-  volume = {10},
-  pages = {no. 9, 303--325},
-  issn = {1083-6489},
-  doi = {10.1214/EJP.v10-241},
-  mrnumber = {2120246}
 }
 
 @article{BlatzTobolsky1945,
@@ -1898,18 +1899,18 @@
   number = {4}
 }
 
-@article{ConstantinETiti1994,
-  title = {Onsager's Conjecture on the Energy Conservation for Solutions of {{Euler}}'s Equation},
-  author = {Constantin, Peter and E, Weinan and Titi, Edriss S.},
-  date = {1994},
+@Article{ConstantinWeinanTiti1994,
+  author       = {Constantin, Peter and E, Weinan and Titi, Edriss S.},
+  date         = {1994},
   journaltitle = {Communications in Mathematical Physics},
+  title        = {Onsager's Conjecture on the Energy Conservation for Solutions of {{Euler}}'s Equation},
+  issn         = {0010-3616},
+  number       = {1},
+  pages        = {207--209},
+  url          = {http://projecteuclid.org/euclid.cmp/1104271041},
+  volume       = {165},
+  mrnumber     = {1298949 (96e:76025)},
   shortjournal = {Comm. Math. Phys.},
-  volume = {165},
-  pages = {207--209},
-  issn = {0010-3616},
-  url = {http://projecteuclid.org/euclid.cmp/1104271041},
-  mrnumber = {1298949 (96e:76025)},
-  number = {1}
 }
 
 @article{ConstantinFefferman1993,
@@ -1995,18 +1996,18 @@
   number = {6}
 }
 
-@article{ConstantinKiselevRyzhikZlatos2008,
-  title = {Diffusion and Mixing in Fluid Flow},
-  author = {Constantin, P. and Kiselev, A. and Ryzhik, L. and Zlato{\v s}, A.},
-  date = {2008},
+@Article{ConstantinKiselevRyzhikZlatovs2008,
+  author       = {Constantin, P. and Kiselev, A. and Ryzhik, L. and Zlato{\v s}, A.},
+  date         = {2008},
   journaltitle = {Annals of Mathematics. Second Series},
+  title        = {Diffusion and Mixing in Fluid Flow},
+  doi          = {10.4007/annals.2008.168.643},
+  issn         = {0003-486X},
+  number       = {2},
+  pages        = {643--674},
+  volume       = {168},
+  mrnumber     = {2434887 (2009e:58045)},
   shortjournal = {Ann. of Math. (2)},
-  volume = {168},
-  pages = {643--674},
-  issn = {0003-486X},
-  doi = {10.4007/annals.2008.168.643},
-  mrnumber = {2434887 (2009e:58045)},
-  number = {2}
 }
 
 @article{ConstantinRamos2007,
@@ -2163,17 +2164,17 @@
   series = {Texts and {{Monographs}} in {{Physics}}}
 }
 
-@incollection{daCosta2015,
-  title = {Mathematical Aspects of Coagulation-Fragmentation Equations},
+@InCollection{Costa2015,
+  author    = {da Costa, F. P.},
   booktitle = {Mathematics of Energy and Climate Change},
-  author = {da Costa, F. P.},
-  date = {2015},
-  volume = {2},
-  pages = {83--162},
+  date      = {2015},
+  title     = {Mathematical Aspects of Coagulation-Fragmentation Equations},
+  pages     = {83--162},
   publisher = {{Springer, Cham}},
-  mrnumber = {3644260},
-  options = {useprefix=true},
-  series = {{{CIM Ser}}. {{Math}}. {{Sci}}.}
+  series    = {{{CIM Ser}}. {{Math}}. {{Sci}}.},
+  volume    = {2},
+  mrnumber  = {3644260},
+  options   = {useprefix=true},
 }
 
 @article{DanchinPaicu2011,
@@ -2291,14 +2292,14 @@
   number = {3}
 }
 
-@book{deGennesProst1995,
-  title = {The Physics of Liquid Crystals},
-  author = {de Gennes, Pierre-Gilles and Prost, J.},
-  date = {1995},
+@Book{GennesProst1995,
+  author    = {de Gennes, Pierre-Gilles and Prost, J.},
+  date      = {1995},
+  title     = {The Physics of Liquid Crystals},
+  isbn      = {978-0-19-851785-6},
   publisher = {{Clarendon Press}},
-  isbn = {978-0-19-851785-6},
-  options = {useprefix=true},
-  series = {International Series of Monographs on Physics}
+  series    = {International Series of Monographs on Physics},
+  options   = {useprefix=true},
 }
 
 @article{DegondEngelLiuPego2019,
@@ -2557,17 +2558,17 @@
   number = {281}
 }
 
-@article{EEngquistLiRenVanden-Eijnden2007,
-  title = {Heterogeneous Multiscale Methods: A Review},
-  author = {E, Weinan and Engquist, Bjorn and Li, Xiantao and Ren, Weiqing and Vanden-Eijnden, Eric},
-  date = {2007},
+@Article{WeinanEngquistLiRenVandenEijnden2007,
+  author       = {E, Weinan and Engquist, Bjorn and Li, Xiantao and Ren, Weiqing and Vanden-Eijnden, Eric},
+  date         = {2007},
   journaltitle = {Communications in Computational Physics},
+  title        = {Heterogeneous Multiscale Methods: A Review},
+  issn         = {1815-2406},
+  number       = {3},
+  pages        = {367--450},
+  volume       = {2},
+  mrnumber     = {2314852 (2008f:74094)},
   shortjournal = {Commun. Comput. Phys.},
-  volume = {2},
-  pages = {367--450},
-  issn = {1815-2406},
-  mrnumber = {2314852 (2008f:74094)},
-  number = {3}
 }
 
 @article{EibeckWagner2003,
@@ -2665,18 +2666,18 @@
   number = {10}
 }
 
-@article{EscobedoLaurencotMischlerPerthame2003,
-  title = {Gelation and Mass Conservation in Coagulation-Fragmentation Models},
-  author = {Escobedo, M. and Lauren{\c c}ot, Ph. and Mischler, S. and Perthame, B.},
-  date = {2003},
+@Article{EscobedoLaurenccotMischlerPerthame2003,
+  author       = {Escobedo, M. and Lauren{\c c}ot, Ph. and Mischler, S. and Perthame, B.},
+  date         = {2003},
   journaltitle = {Journal of Differential Equations},
+  title        = {Gelation and Mass Conservation in Coagulation-Fragmentation Models},
+  doi          = {10.1016/S0022-0396(03)00134-7},
+  issn         = {0022-0396},
+  number       = {1},
+  pages        = {143--174},
+  volume       = {195},
+  mrnumber     = {2019246},
   shortjournal = {J. Differential Equations},
-  volume = {195},
-  pages = {143--174},
-  issn = {0022-0396},
-  doi = {10.1016/S0022-0396(03)00134-7},
-  mrnumber = {2019246},
-  number = {1}
 }
 
 @article{EscobedoMischler2001,
@@ -3117,32 +3118,32 @@
   number = {5-6}
 }
 
-@article{FournierLaurencot2005,
-  title = {Existence of Self-Similar Solutions to {{Smoluchowski}}'s Coagulation Equation},
-  author = {Fournier, Nicolas and Lauren{\c c}ot, Philippe},
-  date = {2005},
+@Article{FournierLaurenccot2005,
+  author       = {Fournier, Nicolas and Lauren{\c c}ot, Philippe},
+  date         = {2005},
   journaltitle = {Communications in Mathematical Physics},
+  title        = {Existence of Self-Similar Solutions to {{Smoluchowski}}'s Coagulation Equation},
+  doi          = {10.1007/s00220-004-1258-5},
+  issn         = {0010-3616},
+  number       = {3},
+  pages        = {589--609},
+  volume       = {256},
+  mrnumber     = {2161272 (2007a:82061)},
   shortjournal = {Comm. Math. Phys.},
-  volume = {256},
-  pages = {589--609},
-  issn = {0010-3616},
-  doi = {10.1007/s00220-004-1258-5},
-  mrnumber = {2161272 (2007a:82061)},
-  number = {3}
 }
 
-@article{FournierLaurencot2009,
-  title = {Marcus-{{Lushnikov}} Processes, {{Smoluchowski}}'s and {{Flory}}'s Models},
-  author = {Fournier, Nicolas and Lauren{\c c}ot, Philippe},
-  date = {2009},
+@Article{FournierLaurenccot2009,
+  author       = {Fournier, Nicolas and Lauren{\c c}ot, Philippe},
+  date         = {2009},
   journaltitle = {Stochastic Processes and their Applications},
+  title        = {Marcus-{{Lushnikov}} Processes, {{Smoluchowski}}'s and {{Flory}}'s Models},
+  doi          = {10.1016/j.spa.2008.02.003},
+  issn         = {0304-4149},
+  number       = {1},
+  pages        = {167--189},
+  volume       = {119},
+  mrnumber     = {2485023},
   shortjournal = {Stochastic Process. Appl.},
-  volume = {119},
-  pages = {167--189},
-  issn = {0304-4149},
-  doi = {10.1016/j.spa.2008.02.003},
-  mrnumber = {2485023},
-  number = {1}
 }
 
 @article{Frank1958,
@@ -3237,16 +3238,16 @@
   series = {Grundlehren Der {{Mathematischen Wissenschaften}} [{{Fundamental Principles}} of {{Mathematical Sciences}}]}
 }
 
-@article{Freuidlin1964,
-  title = {The {{Dirichlet}} Problem for an Equation with Periodic Coefficients Depending on a Small Parameter},
-  author = {Fre\textbackslash{}u\i{}dlin, M. I.},
-  date = {1964},
+@Article{Freextbackslashuidlin1964,
+  author       = {Fre\textbackslash{}u\i{}dlin, M. I.},
+  date         = {1964},
   journaltitle = {Akademija Nauk SSSR. Teorija Verojatnoste\textbackslash{}u\i\textbackslash{} i ee Primenenija},
+  title        = {The {{Dirichlet}} Problem for an Equation with Periodic Coefficients Depending on a Small Parameter},
+  issn         = {0040-361x},
+  pages        = {133--139},
+  volume       = {9},
+  mrnumber     = {0163062},
   shortjournal = {Teor. Verojatnost. i Primenen.},
-  volume = {9},
-  pages = {133--139},
-  issn = {0040-361x},
-  mrnumber = {0163062}
 }
 
 @book{Friedlander1977,
@@ -3343,15 +3344,15 @@
   number = {10}
 }
 
-@article{GantiMeerschaertFoufoula-GeorgiouViparelliParker2010,
-  title = {Normal and Anomalous Diffusion of Gravel Tracer Particles in Rivers},
-  author = {Ganti, Vamsi and Meerschaert, Mark M. and Foufoula-Georgiou, Efi and Viparelli, Enrica and Parker, Gary},
-  date = {2010-05-04},
+@Article{GantiMeerschaertFoufoulaGeorgiouViparelliParker2010,
+  author       = {Ganti, Vamsi and Meerschaert, Mark M. and Foufoula-Georgiou, Efi and Viparelli, Enrica and Parker, Gary},
+  date         = {2010-05-04},
   journaltitle = {Journal of Geophysical Research-Earth Surface},
+  title        = {Normal and Anomalous Diffusion of Gravel Tracer Particles in Rivers},
+  doi          = {10.1029/2008JF001222},
+  issn         = {0148-0227},
+  volume       = {115},
   shortjournal = {J. Geophys. Res.-Earth Surf.},
-  volume = {115},
-  issn = {0148-0227},
-  doi = {10.1029/2008JF001222}
 }
 
 @article{GeigerKersting1994,
@@ -3675,32 +3676,32 @@
   doi = {10.1016/0920-5632(87)90023-5}
 }
 
-@article{HairerIyerKoralovNovikovPajor-Gyulai2018,
-  title = {A Fractional Kinetic Process Describing the Intermediate Time Behaviour of Cellular Flows},
-  author = {Hairer, Martin and Iyer, Gautam and Koralov, Leonid and Novikov, Alexei and Pajor-Gyulai, Zsolt},
-  date = {2018},
+@Article{HairerIyerKoralovNovikovPajorGyulai2018,
+  author       = {Hairer, Martin and Iyer, Gautam and Koralov, Leonid and Novikov, Alexei and Pajor-Gyulai, Zsolt},
+  date         = {2018},
   journaltitle = {The Annals of Probability},
+  title        = {A Fractional Kinetic Process Describing the Intermediate Time Behaviour of Cellular Flows},
+  doi          = {10.1214/17-AOP1196},
+  issn         = {0091-1798},
+  number       = {2},
+  pages        = {897--955},
+  volume       = {46},
+  mrnumber     = {3773377},
   shortjournal = {Ann. Probab.},
-  volume = {46},
-  pages = {897--955},
-  issn = {0091-1798},
-  doi = {10.1214/17-AOP1196},
-  mrnumber = {3773377},
-  number = {2}
 }
 
-@article{HairerKoralovPajor-Gyulai2016,
-  title = {From Averaging to Homogenization in Cellular Flows\textemdash{}an Exact Description of the Transition},
-  author = {Hairer, Martin and Koralov, Leonid and Pajor-Gyulai, Zsolt},
-  date = {2016},
+@Article{HairerKoralovPajorGyulai2016,
+  author       = {Hairer, Martin and Koralov, Leonid and Pajor-Gyulai, Zsolt},
+  date         = {2016},
   journaltitle = {Annales de l'Institut Henri Poincar\'e Probabilit\'es et Statistiques},
+  title        = {From Averaging to Homogenization in Cellular Flows\textemdash{}an Exact Description of the Transition},
+  doi          = {10.1214/15-AIHP690},
+  issn         = {0246-0203},
+  number       = {4},
+  pages        = {1592--1613},
+  volume       = {52},
+  mrnumber     = {3573288},
   shortjournal = {Ann. Inst. Henri Poincar\'e Probab. Stat.},
-  volume = {52},
-  pages = {1592--1613},
-  issn = {0246-0203},
-  doi = {10.1214/15-AIHP690},
-  mrnumber = {3573288},
-  number = {4}
 }
 
 @article{HairerManson2011,
@@ -3847,15 +3848,15 @@
   number = {2}
 }
 
-@book{Hormander2007,
-  title = {The Analysis of Linear Partial Differential Operators. {{III}}},
-  author = {H\"ormander, Lars},
-  date = {2007},
-  publisher = {{Springer, Berlin}},
-  isbn = {978-3-540-49937-4},
-  mrnumber = {2304165 (2007k:35006)},
+@Book{Hoermander2007,
+  author    = {H\"ormander, Lars},
+  date      = {2007},
+  title     = {The Analysis of Linear Partial Differential Operators. {{III}}},
+  isbn      = {978-3-540-49937-4},
   pagetotal = {viii+525},
-  series = {Classics in {{Mathematics}}}
+  publisher = {{Springer, Berlin}},
+  series    = {Classics in {{Mathematics}}},
+  mrnumber  = {2304165 (2007k:35006)},
 }
 
 @article{HouLi2005,
@@ -4104,18 +4105,18 @@
   number = {3-4}
 }
 
-@article{IyerNovikovRyzhikZlatos2010,
-  title = {Exit Times of Diffusions with Incompressible Drift},
-  author = {Iyer, Gautam and Novikov, Alexei and Ryzhik, Lenya and Zlato{\v s}, Andrej},
-  date = {2010},
+@Article{IyerNovikovRyzhikZlatovs2010,
+  author       = {Iyer, Gautam and Novikov, Alexei and Ryzhik, Lenya and Zlato{\v s}, Andrej},
+  date         = {2010},
   journaltitle = {SIAM Journal on Mathematical Analysis},
+  title        = {Exit Times of Diffusions with Incompressible Drift},
+  doi          = {10.1137/090776895},
+  issn         = {0036-1410},
+  number       = {6},
+  pages        = {2484--2498},
+  volume       = {42},
+  mrnumber     = {2733257 (2012d:35059)},
   shortjournal = {SIAM J. Math. Anal.},
-  volume = {42},
-  pages = {2484--2498},
-  issn = {0036-1410},
-  doi = {10.1137/090776895},
-  mrnumber = {2733257 (2012d:35059)},
-  number = {6}
 }
 
 @article{IyerPegoZarnescu2012,
@@ -4188,16 +4189,16 @@
   series = {Grundlehren Der {{Mathematischen Wissenschaften}}}
 }
 
-@article{Jirina1958,
-  title = {Stochastic Branching Processes with Continuous State Space},
-  author = {Ji{\v r}ina, Miloslav},
-  date = {1958},
+@Article{Jivrina1958,
+  author       = {Ji{\v r}ina, Miloslav},
+  date         = {1958},
   journaltitle = {Czechoslovak Mathematical Journal},
+  title        = {Stochastic Branching Processes with Continuous State Space},
+  issn         = {0011-4642},
+  pages        = {292--313},
+  volume       = {8 (83)},
+  mrnumber     = {0101554 (21 \#364)},
   shortjournal = {Czechoslovak Math. J.},
-  volume = {8 (83)},
-  pages = {292--313},
-  issn = {0011-4642},
-  mrnumber = {0101554 (21 \#364)}
 }
 
 @article{JoffeMetivier1986,
@@ -4239,16 +4240,16 @@
   number = {3}
 }
 
-@article{JosephLundgren1972,
-  title = {Quasilinear {{Dirichlet}} Problems Driven by Positive Sources},
-  author = {Joseph, D. D. and Lundgren, T. S.},
-  date = {1972/0073},
+@Article{JosephLundgren73,
+  author       = {Joseph, D. D. and Lundgren, T. S.},
+  date         = {1972/0073},
   journaltitle = {Archive for Rational Mechanics and Analysis},
+  title        = {Quasilinear {{Dirichlet}} Problems Driven by Positive Sources},
+  issn         = {0003-9527},
+  pages        = {241--269},
+  volume       = {49},
+  mrnumber     = {0340701 (49 \#5452)},
   shortjournal = {Arch. Rational Mech. Anal.},
-  volume = {49},
-  pages = {241--269},
-  issn = {0003-9527},
-  mrnumber = {0340701 (49 \#5452)}
 }
 
 @article{JosserandPomeauRica2006,
@@ -4697,32 +4698,32 @@
   number = {2}
 }
 
-@article{KiselevShterenbergZlatos2008,
-  title = {Relaxation Enhancement by Time-Periodic Flows},
-  author = {Kiselev, Alexander and Shterenberg, Roman and Zlato{\v s}, Andrej},
-  date = {2008},
+@Article{KiselevShterenbergZlatovs2008,
+  author       = {Kiselev, Alexander and Shterenberg, Roman and Zlato{\v s}, Andrej},
+  date         = {2008},
   journaltitle = {Indiana University Mathematics Journal},
+  title        = {Relaxation Enhancement by Time-Periodic Flows},
+  doi          = {10.1512/iumj.2008.57.3349},
+  issn         = {0022-2518},
+  number       = {5},
+  pages        = {2137--2152},
+  volume       = {57},
+  mrnumber     = {2463964},
   shortjournal = {Indiana Univ. Math. J.},
-  volume = {57},
-  pages = {2137--2152},
-  issn = {0022-2518},
-  doi = {10.1512/iumj.2008.57.3349},
-  mrnumber = {2463964},
-  number = {5}
 }
 
-@article{KiselevSverak2014,
-  title = {Small Scale Creation for Solutions of the Incompressible Two-Dimensional {{Euler}} Equation},
-  author = {Kiselev, Alexander and {\v S}ver\'ak, Vladimir},
-  date = {2014},
+@Article{KiselevvSverak2014,
+  author       = {Kiselev, Alexander and {\v S}ver\'ak, Vladimir},
+  date         = {2014},
   journaltitle = {Annals of Mathematics. Second Series},
+  title        = {Small Scale Creation for Solutions of the Incompressible Two-Dimensional {{Euler}} Equation},
+  doi          = {10.4007/annals.2014.180.3.9},
+  issn         = {0003-486X},
+  number       = {3},
+  pages        = {1205--1220},
+  volume       = {180},
+  mrnumber     = {3245016},
   shortjournal = {Ann. of Math. (2)},
-  volume = {180},
-  pages = {1205--1220},
-  issn = {0003-486X},
-  doi = {10.4007/annals.2014.180.3.9},
-  mrnumber = {3245016},
-  number = {3}
 }
 
 @article{KiselevXu2015,
@@ -4911,14 +4912,14 @@
   mrnumber = {1578994}
 }
 
-@article{Kruzkov1970,
-  title = {First Order Quasilinear Equations with Several Independent Variables.},
-  author = {Kru{\v z}kov, S. N.},
-  date = {1970},
+@Article{Kruvzkov1970,
+  author       = {Kru{\v z}kov, S. N.},
+  date         = {1970},
   journaltitle = {Mat. Sb. (N.S.)},
-  volume = {81 (123)},
-  pages = {228--255},
-  mrnumber = {0267257 (42 \#2159)}
+  title        = {First Order Quasilinear Equations with Several Independent Variables.},
+  pages        = {228--255},
+  volume       = {81 (123)},
+  mrnumber     = {0267257 (42 \#2159)},
 }
 
 @incollection{Krylov1993,
@@ -4972,17 +4973,17 @@
   mrnumber = {2082053 (2005j:60148)}
 }
 
-@article{KrylovRozovskiui1982,
-  title = {Stochastic Partial Differential Equations and Diffusion Processes},
-  author = {Krylov, N. V. and Rozovski\textbackslash{}u\i, B. L.},
-  date = {1982},
+@Article{KrylovRozovskiextbackslashui1982,
+  author       = {Krylov, N. V. and Rozovski\textbackslash{}u\i, B. L.},
+  date         = {1982},
   journaltitle = {Akademiya Nauk SSSR i Moskovskoe Matematicheskoe Obshchestvo. Uspekhi Matematicheskikh Nauk},
+  title        = {Stochastic Partial Differential Equations and Diffusion Processes},
+  issn         = {0042-1316},
+  issue        = {6(228)},
+  pages        = {75--95},
+  volume       = {37},
+  mrnumber     = {683274 (84d:60095)},
   shortjournal = {Uspekhi Mat. Nauk},
-  volume = {37},
-  pages = {75--95},
-  issn = {0042-1316},
-  issue = {6(228)},
-  mrnumber = {683274 (84d:60095)}
 }
 
 @book{Kuchment1993,
@@ -5129,25 +5130,25 @@
   number = {4}
 }
 
-@article{Ladyzenskaja1968,
-  title = {Unique Global Solvability of the Three-Dimensional {{Cauchy}} Problem for the {{Navier}}-{{Stokes}} Equations in the Presence of Axial Symmetry},
-  author = {Lady{\v z}enskaja, O. A.},
-  date = {1968},
+@Article{Ladyvzenskaja1968,
+  author       = {Lady{\v z}enskaja, O. A.},
+  date         = {1968},
   journaltitle = {Zapiski Nau{\v c}nyh Seminarov Leningradskogo Otdelenija Matemati{\v c}eskogo Instituta im. V. A. Steklova Akademii Nauk SSSR (LOMI)},
+  title        = {Unique Global Solvability of the Three-Dimensional {{Cauchy}} Problem for the {{Navier}}-{{Stokes}} Equations in the Presence of Axial Symmetry},
+  pages        = {155--177},
+  volume       = {7},
+  mrnumber     = {0241833 (39 \#3170)},
   shortjournal = {Zap. Nau{\v c}n. Sem. Leningrad. Otdel. Mat. Inst. Steklov. (LOMI)},
-  volume = {7},
-  pages = {155--177},
-  mrnumber = {0241833 (39 \#3170)}
 }
 
-@book{LadyzenskajaSolonnikovUralceva1968,
-  title = {Linear and Quasilinear Equations of Parabolic Type},
-  author = {Lady{\v z}enskaja, O. A. and Solonnikov, V. A. and Ural'ceva, N. N.},
-  date = {1968},
-  publisher = {{American Mathematical Society, Providence, R.I.}},
-  mrnumber = {0241822},
+@Book{LadyvzenskajaSolonnikovUralceva1968,
+  author    = {Lady{\v z}enskaja, O. A. and Solonnikov, V. A. and Ural'ceva, N. N.},
+  date      = {1968},
+  title     = {Linear and Quasilinear Equations of Parabolic Type},
   pagetotal = {xi+648},
-  series = {Translated from the {{Russian}} by {{S}}. {{Smith}}. {{Translations}} of {{Mathematical Monographs}}, {{Vol}}. 23}
+  publisher = {{American Mathematical Society, Providence, R.I.}},
+  series    = {Translated from the {{Russian}} by {{S}}. {{Smith}}. {{Translations}} of {{Mathematical Monographs}}, {{Vol}}. 23},
+  mrnumber  = {0241822},
 }
 
 @book{Ladyzhenskaya1969,
@@ -5224,80 +5225,80 @@
   mrnumber = {0217893 (36 \#982)}
 }
 
-@article{Laurencot2019,
-  title = {Mass-Conserving Solutions to Coagulation-Fragmentation Equations with Balanced Growth},
-  author = {Lauren{\c c}ot, Philippe},
-  date = {2019},
+@Article{Laurenccot2019,
+  author       = {Lauren{\c c}ot, Philippe},
+  date         = {2019},
   journaltitle = {arXiv:1901.08313 [math.AP]},
-  url = {https://arxiv.org/abs/1901.08313}
+  title        = {Mass-Conserving Solutions to Coagulation-Fragmentation Equations with Balanced Growth},
+  url          = {https://arxiv.org/abs/1901.08313},
 }
 
-@article{Laurencot2019a,
-  title = {Stationary Solutions to Coagulation-Fragmentation Equations},
-  author = {Lauren{\c c}ot, Philippe},
-  date = {2019},
+@Article{Laurenccot2019a,
+  author       = {Lauren{\c c}ot, Philippe},
+  date         = {2019},
   journaltitle = {Annales de l'Institut Henri Poincar\'e C, Analyse non lin\'eaire},
-  issn = {0294-1449},
-  doi = {10.1016/j.anihpc.2019.06.003},
-  url = {http://www.sciencedirect.com/science/article/pii/S0294144919300617}
+  title        = {Stationary Solutions to Coagulation-Fragmentation Equations},
+  doi          = {10.1016/j.anihpc.2019.06.003},
+  issn         = {0294-1449},
+  url          = {http://www.sciencedirect.com/science/article/pii/S0294144919300617},
 }
 
-@article{LaurencotMischler2002,
-  title = {From the Discrete to the Continuous Coagulation-Fragmentation Equations},
-  author = {Lauren{\c c}ot, Philippe and Mischler, St\'ephane},
-  date = {2002},
+@Article{LaurenccotMischler2002,
+  author       = {Lauren{\c c}ot, Philippe and Mischler, St\'ephane},
+  date         = {2002},
   journaltitle = {Proceedings of the Royal Society of Edinburgh. Section A. Mathematics},
+  title        = {From the Discrete to the Continuous Coagulation-Fragmentation Equations},
+  doi          = {10.1017/S0308210500002080},
+  issn         = {0308-2105},
+  number       = {5},
+  pages        = {1219--1248},
+  volume       = {132},
+  mrnumber     = {1938720},
   shortjournal = {Proc. Roy. Soc. Edinburgh Sect. A},
-  volume = {132},
-  pages = {1219--1248},
-  issn = {0308-2105},
-  doi = {10.1017/S0308210500002080},
-  mrnumber = {1938720},
-  number = {5}
 }
 
-@article{LaurencotMischler2002a,
-  title = {The Continuous Coagulation-Fragmentation Equations with Diffusion},
-  author = {Lauren{\c c}ot, Philippe and Mischler, St\'ephane},
-  date = {2002},
+@Article{LaurenccotMischler2002a,
+  author       = {Lauren{\c c}ot, Philippe and Mischler, St\'ephane},
+  date         = {2002},
   journaltitle = {Archive for Rational Mechanics and Analysis},
-  volume = {162},
-  pages = {45--99},
-  issn = {0003-9527},
-  doi = {10.1007/s002050100186},
-  file = {files/724/LaurencotMischler2002a - The Continuous Coagulation Fragmentation Equations with Diffusion.PDF},
-  keywords = {35K57 (35B40 35D05 35F20 45K05 82C40)},
-  mrnumber = {1892231},
-  number = {1}
+  title        = {The Continuous Coagulation-Fragmentation Equations with Diffusion},
+  doi          = {10.1007/s002050100186},
+  issn         = {0003-9527},
+  number       = {1},
+  pages        = {45--99},
+  volume       = {162},
+  file         = {files/724/LaurencotMischler2002a - The Continuous Coagulation Fragmentation Equations with Diffusion.PDF},
+  keywords     = {35K57 (35B40 35D05 35F20 45K05 82C40)},
+  mrnumber     = {1892231},
 }
 
-@article{LaurencotMischler2003,
-  title = {Convergence to Equilibrium for the Continuous Coagulation-Fragmentation Equation},
-  author = {Lauren{\c c}ot, Philippe and Mischler, St\'ephane},
-  date = {2003},
+@Article{LaurenccotMischler2003,
+  author       = {Lauren{\c c}ot, Philippe and Mischler, St\'ephane},
+  date         = {2003},
   journaltitle = {Bulletin des Sciences Math\'ematiques},
-  volume = {127},
-  pages = {179--190},
-  issn = {0007-4497},
-  doi = {10.1016/S0007-4497(02)00002-7},
-  keywords = {82C21 (37L15 45G10 45K05 45M05)},
-  mrnumber = {1988654},
-  number = {3}
+  title        = {Convergence to Equilibrium for the Continuous Coagulation-Fragmentation Equation},
+  doi          = {10.1016/S0007-4497(02)00002-7},
+  issn         = {0007-4497},
+  number       = {3},
+  pages        = {179--190},
+  volume       = {127},
+  keywords     = {82C21 (37L15 45G10 45K05 45M05)},
+  mrnumber     = {1988654},
 }
 
-@article{LaurencotvanRoessel2015,
-  title = {Absence of Gelation and Self-Similar Behavior for a Coagulation-Fragmentation Equation},
-  author = {Lauren{\c c}ot, Philippe and van Roessel, Henry},
-  date = {2015},
+@Article{LaurenccotRoessel2015,
+  author       = {Lauren{\c c}ot, Philippe and van Roessel, Henry},
+  date         = {2015},
   journaltitle = {SIAM Journal on Mathematical Analysis},
+  title        = {Absence of Gelation and Self-Similar Behavior for a Coagulation-Fragmentation Equation},
+  doi          = {10.1137/140976236},
+  issn         = {0036-1410},
+  number       = {3},
+  pages        = {2355--2374},
+  volume       = {47},
+  mrnumber     = {3357627},
+  options      = {useprefix=true},
   shortjournal = {SIAM J. Math. Anal.},
-  volume = {47},
-  pages = {2355--2374},
-  issn = {0036-1410},
-  doi = {10.1137/140976236},
-  mrnumber = {3357627},
-  number = {3},
-  options = {useprefix=true}
 }
 
 @book{LeGall1999,
@@ -6299,17 +6300,17 @@
   number = {3}
 }
 
-@article{Mohle2015,
-  title = {The {{Mittag}}-{{Leffler}} Process and a Scaling Limit for the Block Counting Process of the {{Bolthausen}}-{{Sznitman}} Coalescent},
-  author = {M\"ohle, Martin},
-  date = {2015},
+@Article{Moehle2015,
+  author       = {M\"ohle, Martin},
+  date         = {2015},
   journaltitle = {ALEA. Latin American Journal of Probability and Mathematical Statistics},
+  title        = {The {{Mittag}}-{{Leffler}} Process and a Scaling Limit for the Block Counting Process of the {{Bolthausen}}-{{Sznitman}} Coalescent},
+  issn         = {1980-0436},
+  number       = {1},
+  pages        = {35--53},
+  volume       = {12},
+  mrnumber     = {3333734},
   shortjournal = {ALEA Lat. Am. J. Probab. Math. Stat.},
-  volume = {12},
-  pages = {35--53},
-  issn = {1980-0436},
-  mrnumber = {3333734},
-  number = {1}
 }
 
 @article{Moise1952,
@@ -6477,12 +6478,12 @@
   number = {1}
 }
 
-@article{Novikov2014,
-  title = {On the {{Explosion Problem}} in a {{Ball}}},
-  author = {Novikov, Alexei},
-  year = {2014 (to appear)},
+@Article{Novikov2014toappear,
+  author       = {Novikov, Alexei},
   journaltitle = {Communications in Mathematical Sciences},
-  shortjournal = {Commun. Math. Sci.}
+  title        = {On the {{Explosion Problem}} in a {{Ball}}},
+  shortjournal = {Commun. Math. Sci.},
+  year         = {2014 (to appear)},
 }
 
 @article{NovikovPapanicolaouRyzhik2005,
@@ -6499,16 +6500,16 @@
   number = {7}
 }
 
-@book{NovotnyStraskraba2004,
-  title = {Introduction to the Mathematical Theory of Compressible Flow},
-  author = {Novotn\'y, A. and Stra{\v s}kraba, I.},
-  date = {2004},
-  volume = {27},
-  publisher = {{Oxford University Press, Oxford}},
-  isbn = {0-19-853084-6},
-  mrnumber = {2084891 (2005i:35220)},
+@Book{NovotnyStravskraba2004,
+  author    = {Novotn\'y, A. and Stra{\v s}kraba, I.},
+  date      = {2004},
+  title     = {Introduction to the Mathematical Theory of Compressible Flow},
+  isbn      = {0-19-853084-6},
   pagetotal = {xx+506},
-  series = {Oxford {{Lecture Series}} in {{Mathematics}} and Its {{Applications}}}
+  publisher = {{Oxford University Press, Oxford}},
+  series    = {Oxford {{Lecture Series}} in {{Mathematics}} and Its {{Applications}}},
+  volume    = {27},
+  mrnumber  = {2084891 (2005i:35220)},
 }
 
 @book{Oksendal2003,
@@ -6580,18 +6581,18 @@
   number = {2}
 }
 
-@article{OttoSeisSlepcev2013,
-  title = {Crossover of the Coarsening Rates in Demixing of Binary Viscous Liquids},
-  author = {Otto, Felix and Seis, Christian and Slep{\v c}ev, Dejan},
-  date = {2013},
+@Article{OttoSeisSlepvcev2013,
+  author       = {Otto, Felix and Seis, Christian and Slep{\v c}ev, Dejan},
+  date         = {2013},
   journaltitle = {Communications in Mathematical Sciences},
+  title        = {Crossover of the Coarsening Rates in Demixing of Binary Viscous Liquids},
+  doi          = {10.4310/CMS.2013.v11.n2.a6},
+  issn         = {1539-6746},
+  number       = {2},
+  pages        = {441--464},
+  volume       = {11},
+  mrnumber     = {3002559},
   shortjournal = {Commun. Math. Sci.},
-  volume = {11},
-  pages = {441--464},
-  issn = {1539-6746},
-  doi = {10.4310/CMS.2013.v11.n2.a6},
-  mrnumber = {3002559},
-  number = {2}
 }
 
 @article{PaicuZarnescu2011,
@@ -6622,25 +6623,25 @@
   number = {1}
 }
 
-@article{Pajor-GyulaiSalins2015,
-  title = {On Dynamical Systems Perturbed by a Null-Recurrent Motion: {{The}} General Case},
-  author = {Pajor-Gyulai, Z. and Salins, M.},
-  date = {2015-08},
-  journaltitle = {ArXiv e-prints}
+@Article{PajorGyulaiSalins2015,
+  author       = {Pajor-Gyulai, Z. and Salins, M.},
+  date         = {2015-08},
+  journaltitle = {ArXiv e-prints},
+  title        = {On Dynamical Systems Perturbed by a Null-Recurrent Motion: {{The}} General Case},
 }
 
-@article{Pajor-GyulaiSalins2017,
-  title = {On Dynamical Systems Perturbed by a Null-Recurrent Motion: The General Case},
-  author = {Pajor-Gyulai, Zs. and Salins, M.},
-  date = {2017},
+@Article{PajorGyulaiSalins2017,
+  author       = {Pajor-Gyulai, Zs. and Salins, M.},
+  date         = {2017},
   journaltitle = {Stochastic Processes and their Applications},
+  title        = {On Dynamical Systems Perturbed by a Null-Recurrent Motion: The General Case},
+  doi          = {10.1016/j.spa.2016.09.009},
+  issn         = {0304-4149},
+  number       = {6},
+  pages        = {1960--1997},
+  volume       = {127},
+  mrnumber     = {3646437},
   shortjournal = {Stochastic Process. Appl.},
-  volume = {127},
-  pages = {1960--1997},
-  issn = {0304-4149},
-  doi = {10.1016/j.spa.2016.09.009},
-  mrnumber = {3646437},
-  number = {6}
 }
 
 @article{Pakes1988,
@@ -6850,11 +6851,11 @@
   number = {1}
 }
 
-@book{PittetSaloff-Coste2001,
-  title = {A Survey on the Relationships between Volume Growth, Isoperimetry, and the Behavior of Simple Random Walk on {{Cayley}} Graphs, with Examples},
+@Book{PittetSaloffCoste2001,
   author = {Pittet, Ch and Saloff-Coste, L.},
-  date = {2001},
-  url = {http://www.math.cornell.edu/ lsc/surv.ps.gz}
+  date   = {2001},
+  title  = {A Survey on the Relationships between Volume Growth, Isoperimetry, and the Behavior of Simple Random Walk on {{Cayley}} Graphs, with Examples},
+  url    = {http://www.math.cornell.edu/ lsc/surv.ps.gz},
 }
 
 @article{Poon1996,
@@ -6871,11 +6872,11 @@
   number = {3-4}
 }
 
-@article{PoschkeSokolovZaksNepomnyashchy2017,
-  title = {Transport in the Cat's Eye Flow on Intermediate Time Scales},
-  author = {P\"oschke, P. and Sokolov, I. M. and Zaks, M. A. and Nepomnyashchy, A. A.},
-  date = {2017-07},
-  journaltitle = {ArXiv e-prints}
+@Article{PoeschkeSokolovZaksNepomnyashchy2017,
+  author       = {P\"oschke, P. and Sokolov, I. M. and Zaks, M. A. and Nepomnyashchy, A. A.},
+  date         = {2017-07},
+  journaltitle = {ArXiv e-prints},
+  title        = {Transport in the Cat's Eye Flow on Intermediate Time Scales},
 }
 
 @article{Prabhakar1971,
@@ -7043,17 +7044,17 @@
   pages = {2636--2647}
 }
 
-@book{Rozovskiui1990,
-  title = {Stochastic Evolution Systems},
-  author = {Rozovski\textbackslash{}u\i, B. L.},
-  date = {1990},
-  volume = {35},
-  publisher = {{Kluwer Academic Publishers Group, Dordrecht}},
-  doi = {10.1007/978-94-011-3830-7},
-  isbn = {0-7923-0037-8},
-  mrnumber = {1135324 (92k:60136)},
+@Book{Rozovskiextbackslashui1990,
+  author    = {Rozovski\textbackslash{}u\i, B. L.},
+  date      = {1990},
+  title     = {Stochastic Evolution Systems},
+  doi       = {10.1007/978-94-011-3830-7},
+  isbn      = {0-7923-0037-8},
   pagetotal = {xviii+315},
-  series = {Mathematics and Its {{Applications}} ({{Soviet Series}})}
+  publisher = {{Kluwer Academic Publishers Group, Dordrecht}},
+  series    = {Mathematics and Its {{Applications}} ({{Soviet Series}})},
+  volume    = {35},
+  mrnumber  = {1135324 (92k:60136)},
 }
 
 @article{RudnickHu1987,
@@ -7134,31 +7135,31 @@
   number = {3}
 }
 
-@book{SchillingSongVondracek2010,
-  title = {Bernstein Functions},
-  author = {Schilling, R. L. and Song, R. and Vondra{\v c}ek, Z.},
-  date = {2010},
-  volume = {37},
-  publisher = {{Walter de Gruyter \& Co.}},
-  location = {{Berlin}},
-  isbn = {978-3-11-021530-4},
-  mrnumber = {2598208 (2011d:60060)},
+@Book{SchillingSongVondravcek2010,
+  author    = {Schilling, R. L. and Song, R. and Vondra{\v c}ek, Z.},
+  date      = {2010},
+  title     = {Bernstein Functions},
+  isbn      = {978-3-11-021530-4},
+  location  = {{Berlin}},
   pagetotal = {xii+313},
-  series = {De {{Gruyter Studies}} in {{Mathematics}}}
+  publisher = {{Walter de Gruyter \& Co.}},
+  series    = {De {{Gruyter Studies}} in {{Mathematics}}},
+  volume    = {37},
+  mrnumber  = {2598208 (2011d:60060)},
 }
 
-@book{SchillingSongVondracek2012,
-  title = {Bernstein Functions},
-  author = {Schilling, Ren\'e L. and Song, Renming and Vondra{\v c}ek, Zoran},
-  date = {2012},
-  edition = {Second},
-  volume = {37},
-  publisher = {{Walter de Gruyter \& Co., Berlin}},
-  doi = {10.1515/9783110269338},
-  isbn = {978-3-11-025229-3 978-3-11-026933-8},
-  mrnumber = {2978140},
+@Book{SchillingSongVondravcek2012,
+  author    = {Schilling, Ren\'e L. and Song, Renming and Vondra{\v c}ek, Zoran},
+  date      = {2012},
+  title     = {Bernstein Functions},
+  doi       = {10.1515/9783110269338},
+  edition   = {Second},
+  isbn      = {978-3-11-025229-3 978-3-11-026933-8},
   pagetotal = {xiv+410},
-  series = {De {{Gruyter Studies}} in {{Mathematics}}}
+  publisher = {{Walter de Gruyter \& Co., Berlin}},
+  series    = {De {{Gruyter Studies}} in {{Mathematics}}},
+  volume    = {37},
+  mrnumber  = {2978140},
 }
 
 @book{Schmidt1980,
@@ -7256,18 +7257,18 @@
   pagetotal = {v+112}
 }
 
-@article{SereginSverak2002,
-  title = {Navier-{{Stokes}} Equations with Lower Bounds on the Pressure},
-  author = {Seregin, G. and {\v S}ver\'ak, V.},
-  date = {2002},
+@Article{SereginvSverak2002,
+  author       = {Seregin, G. and {\v S}ver\'ak, V.},
+  date         = {2002},
   journaltitle = {Archive for Rational Mechanics and Analysis},
+  title        = {Navier-{{Stokes}} Equations with Lower Bounds on the Pressure},
+  doi          = {10.1007/s002050200199},
+  issn         = {0003-9527},
+  number       = {1},
+  pages        = {65--86},
+  volume       = {163},
+  mrnumber     = {1905137 (2003c:35135)},
   shortjournal = {Arch. Ration. Mech. Anal.},
-  volume = {163},
-  pages = {65--86},
-  issn = {0003-9527},
-  doi = {10.1007/s002050200199},
-  mrnumber = {1905137 (2003c:35135)},
-  number = {1}
 }
 
 @article{Serfaty1999,
@@ -7415,28 +7416,28 @@
   mrnumber = {0228077 (37 \#3661)}
 }
 
-@article{Slack1972,
-  title = {Further Notes on Branching Processes with Mean \$1\$},
-  author = {Slack, R. S.},
-  date = {1972/0073},
+@Article{Slack73,
+  author       = {Slack, R. S.},
+  date         = {1972/0073},
   journaltitle = {Z. Wahrscheinlichkeitstheorie und Verw. Gebiete},
-  volume = {25},
-  pages = {31--38},
-  mrnumber = {0331539 (48 \#9871)}
+  title        = {Further Notes on Branching Processes with Mean \$1\$},
+  pages        = {31--38},
+  volume       = {25},
+  mrnumber     = {0331539 (48 \#9871)},
 }
 
-@article{Slepcev2008,
-  title = {Coarsening in Nonlocal Interfacial Systems},
-  author = {Slep{\v c}ev, Dejan},
-  date = {2008},
+@Article{Slepvcev2008,
+  author       = {Slep{\v c}ev, Dejan},
+  date         = {2008},
   journaltitle = {SIAM Journal on Mathematical Analysis},
+  title        = {Coarsening in Nonlocal Interfacial Systems},
+  doi          = {10.1137/080713598},
+  issn         = {0036-1410},
+  number       = {3},
+  pages        = {1029--1048},
+  volume       = {40},
+  mrnumber     = {2452878 (2010a:35110)},
   shortjournal = {SIAM J. Math. Anal.},
-  volume = {40},
-  pages = {1029--1048},
-  issn = {0036-1410},
-  doi = {10.1137/080713598},
-  mrnumber = {2452878 (2010a:35110)},
-  number = {3}
 }
 
 @article{Smoluchowski1916,
@@ -7556,15 +7557,15 @@
   number = {4}
 }
 
-@article{StarkFoufoula-GeorgiouGanti2009,
-  title = {A Nonlocal Theory of Sediment Buffering and Bedrock Channel Evolution},
-  author = {Stark, Colin P. and Foufoula-Georgiou, Efi and Ganti, Vamsi},
-  date = {2009-03-07},
+@Article{StarkFoufoulaGeorgiouGanti2009,
+  author       = {Stark, Colin P. and Foufoula-Georgiou, Efi and Ganti, Vamsi},
+  date         = {2009-03-07},
   journaltitle = {Journal of Geophysical Research-Earth Surface},
+  title        = {A Nonlocal Theory of Sediment Buffering and Bedrock Channel Evolution},
+  doi          = {10.1029/2008JF000981},
+  issn         = {0148-0227},
+  volume       = {114},
   shortjournal = {J. Geophys. Res.-Earth Surf.},
-  volume = {114},
-  issn = {0148-0227},
-  doi = {10.1029/2008JF000981}
 }
 
 @article{Stewart1978,
@@ -7951,14 +7952,14 @@
   number = {1}
 }
 
-@article{vanderWaerden1927,
-  title = {Beweis Einer Baudetschen Vermutung},
-  author = {van der Waerden, Bartel},
-  date = {1927},
+@Article{Waerden1927,
+  author       = {van der Waerden, Bartel},
+  date         = {1927},
   journaltitle = {Nieuw Arch. Wisk.},
-  volume = {19},
-  pages = {212--216},
-  options = {useprefix=true}
+  title        = {Beweis Einer Baudetschen Vermutung},
+  pages        = {212--216},
+  volume       = {19},
+  options      = {useprefix=true},
 }
 
 @book{Vanderzande1998,
@@ -8075,27 +8076,27 @@
   number = {3-4}
 }
 
-@article{vonSmoluchowski1916,
-  title = {Drei {{Vortr\"age}} \"Uber {{Diffusion}}, {{Brownsche Bewegung}} Und {{Koagulation}} von {{Kolloidteilchen}}},
-  author = {von Smoluchowski, Marian},
-  date = {1916},
+@Article{Smoluchowski1916a,
+  author       = {von Smoluchowski, Marian},
+  date         = {1916},
   journaltitle = {Physik. Z.},
-  volume = {17},
-  pages = {557--585},
-  options = {useprefix=true}
+  title        = {Drei {{Vortr\"age}} \"Uber {{Diffusion}}, {{Brownsche Bewegung}} Und {{Koagulation}} von {{Kolloidteilchen}}},
+  pages        = {557--585},
+  volume       = {17},
+  options      = {useprefix=true},
 }
 
-@article{vonSmoluchowski1917,
-  title = {Experiments on a mathematical theory of kinetic coagulation of coloid solutions.},
-  author = {von Smoluchowski, M},
-  date = {1917},
+@Article{Smoluchowski1917a,
+  author       = {von Smoluchowski, M},
+  date         = {1917},
   journaltitle = {Zeitschrift fur Physikalische Chemie\textendash{}Stochiometrie und Verwandtschaftslehre},
-  volume = {92},
-  pages = {129--168},
-  issn = {0372-8501},
-  langid = {german},
-  number = {2},
-  options = {useprefix=true}
+  title        = {Experiments on a mathematical theory of kinetic coagulation of coloid solutions.},
+  issn         = {0372-8501},
+  number       = {2},
+  pages        = {129--168},
+  volume       = {92},
+  langid       = {german},
+  options      = {useprefix=true},
 }
 
 @book{Vrabie2003,
@@ -8233,28 +8234,28 @@
   journaltitle = {ArXiv e-prints}
 }
 
-@article{YaoZlatos2017,
-  title = {Mixing and Un-Mixing by Incompressible Flows},
-  author = {Yao, Yao and Zlato{\v s}, Andrej},
-  date = {2017},
+@Article{YaoZlatovs2017,
+  author       = {Yao, Yao and Zlato{\v s}, Andrej},
+  date         = {2017},
   journaltitle = {Journal of the European Mathematical Society (JEMS)},
+  title        = {Mixing and Un-Mixing by Incompressible Flows},
+  doi          = {10.4171/JEMS/709},
+  issn         = {1435-9855},
+  number       = {7},
+  pages        = {1911--1948},
+  volume       = {19},
+  mrnumber     = {3656475},
   shortjournal = {J. Eur. Math. Soc. (JEMS)},
-  volume = {19},
-  pages = {1911--1948},
-  issn = {1435-9855},
-  doi = {10.4171/JEMS/709},
-  mrnumber = {3656475},
-  number = {7}
 }
 
-@article{YeatesHornigWilmot-Smith2010,
-  title = {Topological Constraints on Magnetic Relaxation},
-  author = {Yeates, AR and Hornig, Gunnar and Wilmot-Smith, AL},
-  date = {2010},
+@Article{YeatesHornigWilmotSmith2010,
+  author       = {Yeates, AR and Hornig, Gunnar and Wilmot-Smith, AL},
+  date         = {2010},
   journaltitle = {Physical review letters},
-  volume = {105},
-  pages = {085002},
-  number = {8}
+  title        = {Topological Constraints on Magnetic Relaxation},
+  number       = {8},
+  pages        = {085002},
+  volume       = {105},
 }
 
 @article{Young1988,
@@ -8378,18 +8379,18 @@
   number = {1}
 }
 
-@article{Zlatos2010,
-  title = {Diffusion in Fluid Flow: Dissipation Enhancement by Flows in {{2D}}},
-  author = {Zlato{\v s}, Andrej},
-  date = {2010},
+@Article{Zlatovs2010,
+  author       = {Zlato{\v s}, Andrej},
+  date         = {2010},
   journaltitle = {Communications in Partial Differential Equations},
+  title        = {Diffusion in Fluid Flow: Dissipation Enhancement by Flows in {{2D}}},
+  doi          = {10.1080/03605300903362546},
+  issn         = {0360-5302},
+  number       = {3},
+  pages        = {496--534},
+  volume       = {35},
+  mrnumber     = {2748635},
   shortjournal = {Comm. Partial Differential Equations},
-  volume = {35},
-  pages = {496--534},
-  issn = {0360-5302},
-  doi = {10.1080/03605300903362546},
-  mrnumber = {2748635},
-  number = {3}
 }
 
 @article{Zygalakis2011,
@@ -8406,4 +8407,85 @@
   number = {1}
 }
 
+@Article{ArbelKorbaSalimGretton2019,
+  author      = {Michael Arbel and Anna Korba and Adil Salim and Arthur Gretton},
+  date        = {2019-06-11},
+  title       = {Maximum Mean Discrepancy Gradient Flow},
+  eprint      = {1906.04370v2},
+  eprintclass = {stat.ML},
+  eprinttype  = {arXiv},
+  pages       = {6481--6491},
+  abstract    = {We construct a Wasserstein gradient flow of the maximum mean discrepancy (MMD) and study its convergence properties. The MMD is an integral probability metric defined for a reproducing kernel Hilbert space (RKHS), and serves as a metric on probability measures for a sufficiently rich RKHS. We obtain conditions for convergence of the gradient flow towards a global optimum, that can be related to particle transport when optimizing neural networks. We also propose a way to regularize this MMD flow, based on an injection of noise in the gradient. This algorithmic fix comes with theoretical and empirical evidence. The practical implementation of the flow is straightforward, since both the MMD and its gradient have simple closed-form expressions, which can be easily estimated with samples.},
+  booktitle   = {Advances in Neural Information Processing Systems},
+  file        = {:http\://arxiv.org/pdf/1906.04370v2:PDF},
+  keywords    = {stat.ML, cs.LG},
+  year        = {2019},
+}
 
+@Article{RamdasGarciaTrillosCuturi2017,
+  author   = {Ramdas, Aaditya and Garc\'{\i}a Trillos, Nicol\'{a}s and Cuturi, Marco},
+  title    = {On {W}asserstein two-sample testing and related families of nonparametric tests},
+  doi      = {10.3390/e19020047},
+  number   = {2},
+  pages    = {Paper No. 47, 15},
+  volume   = {19},
+  journal  = {Entropy. An International and Interdisciplinary Journal of Entropy and Information Studies},
+  keywords = {62G10},
+  mrnumber = {3608466},
+  year     = {2017},
+}
+
+@Article{MarcotteDoeringThiffeaultYoung2018a,
+  author   = {Marcotte, Florence and Doering, Charles R. and Thiffeault, Jean-Luc and Young, William R.},
+  title    = {Optimal heat transfer and optimal exit times},
+  doi      = {10.1137/17M1150220},
+  issn     = {0036-1399},
+  number   = {1},
+  pages    = {591--608},
+  volume   = {78},
+  journal  = {SIAM Journal on Applied Mathematics},
+  keywords = {80A20 (65K10)},
+  mrnumber = {3765928},
+  year     = {2018},
+}
+
+@Article{BeckWayne2009,
+  author   = {Beck, Margaret and Wayne, C. Eugene},
+  title    = {Using global invariant manifolds to understand metastability in the {B}urgers equation with small viscosity},
+  doi      = {10.1137/08073651X},
+  number   = {3},
+  pages    = {1043--1065},
+  volume   = {8},
+  journal  = {SIAM Journal on Applied Dynamical Systems},
+  keywords = {35Q53 (35B40 35B41 35B42 37L05 37L10)},
+  mrnumber = {2551255},
+  year     = {2009},
+}
+
+@Book{Thulukkanam2013,
+  author    = {Thulukkanam, Kuppan},
+  date      = {2013-05-20},
+  title     = {Heat Exchanger Design Handbook},
+  isbn      = {1439842124},
+  pagetotal = {1260},
+  publisher = {Taylor & Francis Inc},
+  url       = {https://www.ebook.de/de/product/15605807/kuppan_thulukkanam_heat_exchanger_design_handbook.html},
+  ean       = {9781439842126},
+  year      = {2013},
+}
+
+@Book{Lienhard2020,
+  author    = {Lienhard, IV, John H. and Lienhard, V, John H.},
+  date      = {2020-01-31},
+  title     = {A Heat Transfer Textbook},
+  isbn      = {0486837351},
+  pagetotal = {784},
+  publisher = {Dover Publications Inc.},
+  url       = {https://www.ebook.de/de/product/38396259/john_lienhard_a_heat_transfer_textbook.html},
+  ean       = {9780486837352},
+  year      = {2020},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}
+
+@Comment{jabref-meta: keypatterndefault:[authors][year];}
