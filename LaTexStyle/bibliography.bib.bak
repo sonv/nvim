@@ -8486,6 +8486,20 @@
   year      = {2020},
 }
 
+@Article{Ziliotto2017,
+  author   = {Ziliotto, Bruno},
+  title    = {Stochastic homogenization of nonconvex {H}amilton-{J}acobi equations: a counterexample},
+  doi      = {10.1002/cpa.21674},
+  issn     = {0010-3640},
+  number   = {9},
+  pages    = {1798--1809},
+  volume   = {70},
+  journal  = {Communications on Pure and Applied Mathematics},
+  keywords = {35F21 (35B27 35F25 49J45 60H25)},
+  mrnumber = {3684310},
+  year     = {2017},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: keypatterndefault:[authors][year];}
