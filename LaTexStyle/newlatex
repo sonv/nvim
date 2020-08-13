@@ -11,7 +11,7 @@ else
       mv newfile.tex "${name}"
       ;;
     2)
-      cp ~/LaTexStyle/newfile.tex "${name}"
+      cp ~/lib/LaTexStyle/newfile.tex "${name}"
       ;;
   esac
 fi
