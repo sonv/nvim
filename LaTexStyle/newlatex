@@ -8,10 +8,13 @@ else
   case $option in
     1)
       cp ~/lib/LaTexStyle/* ./
-      mv newfile.tex "${name}"
+      mv newfile.tex "${name}.tex"
       ;;
     2)
-      cp ~/lib/LaTexStyle/newfile.tex "${name}"
+      cp ~/lib/LaTexStyle/newfile.tex "${name}.tex"
+      cp ~/lib/LaTexStyle/newfile-printfriendly.tex "${name}-printfriendly.tex"
+      cp ~/lib/LaTexStyle/newfile-tablet.tex "${name}-tablet.tex"
+      cp ~/lib/LaTexStyle/newfile-publish.tex "${name}-publish.tex"
       ;;
   esac
 fi
