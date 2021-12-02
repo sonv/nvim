@@ -22,3 +22,5 @@ set colorcolumn=80
 
 set scrolloff=8
 set mouse=a
+
+set spelllang=en
