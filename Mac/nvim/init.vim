@@ -15,15 +15,21 @@ Plugin 'tpope/vim-fugitive'
 " easymotion lets me move faster in vim
 Plugin 'easymotion/vim-easymotion'
 
-" autocomplete
-Plugin 'hrsh7th/nvim-compe'
 
-" Snippets that help me complete.
-Plugin 'SirVer/ultisnips'
 
 
 " Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
+" " For vsnip users.
+Plugin 'hrsh7th/cmp-vsnip'
+Plugin 'hrsh7th/vim-vsnip'
+
+" Snippets that help me complete.
+Plugin 'rafamadriz/friendly-snippets'
+
+" For luasnip users.
+"Plugin 'L3MON4D3/LuaSnip'
+"Plugin 'saadparwaiz1/cmp_luasnip'
+
 
 Plugin 'vim-airline/vim-airline'
 
@@ -34,7 +40,11 @@ Plugin 'lervag/vimtex'
 Plugin 'neovim/nvim-lspconfig'
 
 "" completion
-Plugin 'nvim-lua/completion-nvim'
+Plugin 'hrsh7th/cmp-nvim-lsp'
+Plugin 'hrsh7th/cmp-buffer'
+Plugin 'hrsh7th/cmp-path'
+Plugin 'hrsh7th/cmp-cmdline'
+Plugin 'hrsh7th/nvim-cmp'
 
 "" nerdtree
 Plugin 'preservim/nerdtree'
@@ -63,7 +73,6 @@ inoremap <F3> <C-x><C-o>
 set background=dark
 colorscheme gruvbox8
 
-lua require'lspconfig'.texlab.setup{on_attach=require'completion'.on_attach}
 
 "" F5 for date 
 nnoremap <F5> "=strftime("%Y-%m-%d")<CR>P

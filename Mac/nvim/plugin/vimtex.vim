@@ -15,14 +15,13 @@
 
 
 let g:vimtex_compiler_latexmk = {
-            \ 'backend' : 'nvim',
             \ 'background' : 1,
-            \ 'build_dir' : 'output',
             \ 'callback' : 1,
             \ 'continuous' : 0,
             \ 'executable' : 'latexmk',
             \ 'options' : [
             \   '-verbose',
+            \   '-bibtex',
             \   '-file-line-error',
             \   '-synctex=1',
             \   '-interaction=nonstopmode',
