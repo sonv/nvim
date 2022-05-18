@@ -1,206 +1,121 @@
-let mapleader="\<SPACE>"
-
-set showmatch 		"Show matching brackets
-set number		"Show the line numbers on the left side
-set formatoptions+=o	"Continue comment marker in new lines
-set expandtab		"Insert spaces when TAB
-set tabstop=4		"Render TABs with this many spaces
-set shiftwidth=4	"Indentation amount for < and > commands
-set smartindent      "Smart indentation
-
-set nojoinspaces	"Prevent inserting two spaces after punctuation on a join (J)
-
-set ignorecase          " Make searching case insensitive
-set smartcase           " ... unless the query has capital letters.
-set gdefault            " Use 'g' flag by default with :s/foo/bar/.
-
 ""Plugins section
 
 " Plugins will be downloaded under the specified directory.
-call plug#begin('~/.vim/plugged')
 
-"" Vimtex
-Plug 'lervag/vimtex'
+" set the runtime path to include Vundle and initialize
+"
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+
+" easymotion lets me move faster in vim
+Plugin 'easymotion/vim-easymotion'
 
 
-"" Autocomplete-- I am using CoC now
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Snippets are separated from the engine. Add this if you want them:
+" " For vsnip users.
+Plugin 'hrsh7th/cmp-vsnip'
+Plugin 'hrsh7th/vim-vsnip'
+
+" Snippets that help me complete.
+Plugin 'rafamadriz/friendly-snippets'
+
+" For luasnip users.
+"Plugin 'L3MON4D3/LuaSnip'
+"Plugin 'saadparwaiz1/cmp_luasnip'
+
+
+Plugin 'vim-airline/vim-airline'
+
+"" vimtex
+Plugin 'lervag/vimtex'
+
+"" lsp
+Plugin 'neovim/nvim-lspconfig'
+
+"" vim-gui-zoom
+Plugin 'drzel/vim-gui-zoom'
+
+
+"" telescope
+Plugin 'nvim-lua/plenary.nvim'
+Plugin 'nvim-telescope/telescope.nvim'
+Plugin 'nvim-treesitter/nvim-treesitter'
+
+"" completion
+Plugin 'hrsh7th/cmp-nvim-lsp'
+Plugin 'hrsh7th/cmp-buffer'
+Plugin 'hrsh7th/cmp-path'
+Plugin 'hrsh7th/cmp-cmdline'
+Plugin 'hrsh7th/nvim-cmp'
+
+"" nerdtree
+Plugin 'preservim/nerdtree'
+
+""linter
+Plugin 'dense-analysis/ale'
 
 " Theme                 
-"Plug 'morhetz/gruvbox'    
-Plug 'haishanh/night-owl.vim'
+Plugin 'haishanh/night-owl.vim'
+Plugin 'lifepillar/vim-gruvbox8'
+Plugin 'projekt0n/github-nvim-theme'
 
-if (has("termguicolors"))
-    set termguicolors
-endif
+"Plugin 'glacambre/firenvim'
 
-"Status bar
-Plug 'vim-airline/vim-airline'
+" vim on overleaf
+Plugin 'da-h/AirLatex.vim'
 
 
-call plug#end()
 
-colorscheme night-owl
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
-" vim-autoformat
-"noremap <F3> :gg=G<CR>
+"" Defining LEADER key
+nnoremap <space> <Nop>
+let mapleader = "\<Space>"
+let maplocalleader = "\<Space>"
 
-"  Latex
-let g:tex_flavor='latex' "Use vim-latex even when *.tex file is newcreated)
-let g:vimtex_compiler_latexmk = {
-            \ 'backend' : 'nvim',
-            \ 'background' : 1,
-            \ 'build_dir' : '',
-            \ 'callback' : 1,
-            \ 'continuous' : 0,
-            \ 'executable' : 'latexmk',
-            \ 'options' : [
-            \   '-verbose',    
-            \   '-file-line-error',    
-            \   '-synctex=1',    
-            \   '-interaction=nonstopmode',    
-            \ ],        
-            \}          
-let g:tex_conceal = ''    
-let g:vimtex_view_method = 'zathura'    
-let g:vimtex_compiler_progname = 'nvr'    
-let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'    
-let g:vimtex_view_general_options_latexmk = '--unique'    
-let g:latex_fold_preamble = 1    
-let g:polyglot_disabled = ['latex']    
-let g:vimtex_quickfix_autoclose_after_keystrokes = 2     
+inoremap <F3> <C-x><C-o>
 
-" Use <F4> to auto complete deimeter in latex
-imap <F4> <plug>(vimtex-delim-close)
+set background=dark
+colorscheme gruvbox8
+"colorscheme github_dark
+"colorscheme night-owl
+hi Normal ctermbg=NONE guibg=NONE
 
-"" CoC stuff
-" if hidden is not set, TextEdit might fail.
-set hidden
 
-" Some servers have issues with backup files, see #649
-set nobackup
-set nowritebackup
+"' type dts for timestamp
+iab <expr> dts strftime("%Y-%m-%d")
 
-" Better display for messages
-set cmdheight=2
+"" set up vim-gui-zoom
+set guifont=Hack:h12
+nmap <c-+> :ZoomIn<CR>
+nmap <c--> :ZoomOut<CR>
 
-" You will have bad experience for diagnostic messages when it's default 4000.
-set updatetime=300
 
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
 
-" always show signcolumns
-set signcolumn=yes
+nnoremap <silent> <F11> :set spell!<cr>
+inoremap <silent> <F11> <C-O>:set spell!<cr>
 
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"" Overleaf username
+let g:AirLatexUsername="cookies:overleaf_session2=s%3A_5uJQCTlhxpSR84cVtqwE97EQ4Z4am8z.WqxEhKVMWkgu6jXTlNo8cc8DB4X2i%2B%2Br2ActouNDqYg"
+"let g:AirLatexUsername="tsvan@upenn.edu"
+let g:AirLatexLogLevel="DEBUG"
+nmap <leader>a :AirLatex<CR>
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+"" neovide
+let g:neovide_transparency=0.8
 
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-z> coc#refresh()
-
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" Or use `complete_info` if your vim support it, like:
-" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
-
-" Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
-augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
-
-" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Remap for do codeAction of current line
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Fix autofix problem of current line
-nmap <leader>qf  <Plug>(coc-fix-current)
-
-" Create mappings for function text object, requires document symbols feature of languageserver.
-xmap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap if <Plug>(coc-funcobj-i)
-omap af <Plug>(coc-funcobj-a)
-
-" Use <TAB> for select selections ranges, needs server support, like: coc-tsserver, coc-python
-nmap <silent> <TAB> <Plug>(coc-range-select)
-xmap <silent> <TAB> <Plug>(coc-range-select)
-
-" Use `:Format` to format current buffer
-command! -nargs=0 Format :call CocAction('format')
-
-" Use `:Fold` to fold current buffer
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-" use `:OR` for organize import of current buffer
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
-" Add status line support, for integration with other plugin, checkout `:h coc-status`
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" Using CocList
-" Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-" Show commands
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-
+"" set title
+" enable setting title
+set title
+" configure title to look like: Vim /path/to/file
+set titlestring=SV:\ %-25.55F\ %a%r%m titlelen=70
 
