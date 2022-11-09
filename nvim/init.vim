@@ -65,6 +65,7 @@ Plugin 'dense-analysis/ale'
 Plugin 'haishanh/night-owl.vim'
 Plugin 'lifepillar/vim-gruvbox8'
 Plugin 'projekt0n/github-nvim-theme'
+Plugin 'folke/tokyonight.nvim'
 
 "Plugin 'glacambre/firenvim'
 
@@ -85,7 +86,8 @@ let maplocalleader = "\<Space>"
 inoremap <F3> <C-x><C-o>
 
 set background=dark
-colorscheme gruvbox8
+colorscheme tokyonight
+"colorscheme gruvbox8
 "colorscheme github_dark
 "colorscheme night-owl
 hi Normal ctermbg=NONE guibg=NONE
@@ -97,12 +99,20 @@ iab <expr> dts strftime("%Y-%m-%d")
 "" set up vim-gui-zoom
 set guifont=Hack:h12
 nmap <c-+> :ZoomIn<CR>
-nmap <c--> :ZoomOut<CR>
+nmap <c-=> :ZoomOut<CR>
 
 
 
 nnoremap <silent> <F11> :set spell!<cr>
 inoremap <silent> <F11> <C-O>:set spell!<cr>
+
+inoremap <expr> ll "\\left"
+inoremap <expr> rr "\\right"
+
+inoremap <expr> <CR>
+    \ getline('.')[col('.')-1]=='}'
+    \ ? "\<CR>\<C-d>\<C-o>O" : "\<CR>"
+
 
 "" Overleaf username
 let g:AirLatexUsername="cookies:overleaf_session2=s%3A_5uJQCTlhxpSR84cVtqwE97EQ4Z4am8z.WqxEhKVMWkgu6jXTlNo8cc8DB4X2i%2B%2Br2ActouNDqYg"

@@ -15,6 +15,7 @@
 
 
 let g:vimtex_compiler_latexmk = {
+            \ 'build_dir' : 'latexbuild',
             \ 'background' : 1,
             \ 'callback' : 1,
             \ 'continuous' : 0,
@@ -44,10 +45,12 @@ let g:vimtex_complete_close_braces = 1
 
 "" config for Zathura
 
+"let g:tex_flavor = "latex"
+let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'    
-let g:vimtex_compiler_progname = 'nvr'    
-let g:tex_flavor = "latex"
+"let g:vimtex_view_general_viewer = 'Zathura'
 "let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'    
+let g:vimtex_compiler_progname = 'nvr'    
 
 "augroup vimtex_mac
 "    autocmd!
@@ -65,4 +68,3 @@ let g:tex_flavor = "latex"
 "
 "    call jobstart(l:cmd + [line('.'), l:out, l:src_file_path])
 "endfunction
-
