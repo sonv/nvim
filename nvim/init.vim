@@ -106,7 +106,6 @@ nmap <c-=> :ZoomOut<CR>
 
 
 
-set spell
 nnoremap <silent> <F11> :set spell!<cr>
 inoremap <silent> <F11> <C-O>:set spell!<cr>
 
