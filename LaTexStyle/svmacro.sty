@@ -76,14 +76,9 @@
   \ifSV@draft
     % Should be done before loading showkeys
     \providecommand*{\showkeyslabelformat}[1]{%
-      \fcolorbox{blue!50!black}{cyan!5!white}{%
-	\itshape\fontfamily{\rmdefault}%
-	%\fontsize{4.5pt}{5.4pt}\selectfont%
-	\tiny%
-	#1%
-      }
-    }
+    \fbox{ \parbox[t]{2cm}{\raggedright\normalfont\tiny\ttfamily\hyphenchar\font=`\:\url{#1}} } }
     \RequirePackage[notref,notcite]{showkeys}
+    \RequirePackage[obeyspaces,hyphens,spaces]{url}
   \fi%ifSV@draft
 \fi\fi%else ifSV@tablet, ifSV@twocolumn
 \ifSV@minimal\else

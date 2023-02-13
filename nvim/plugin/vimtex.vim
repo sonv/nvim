@@ -48,6 +48,8 @@ let g:vimtex_complete_close_braces = 1
 "let g:tex_flavor = "latex"
 let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'    
+let g:Tex_MultipleCompileFormats='pdf,bibtex,pdf'
+
 "let g:vimtex_view_general_viewer = 'Zathura'
 "let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'    
 let g:vimtex_compiler_progname = 'nvr'    
