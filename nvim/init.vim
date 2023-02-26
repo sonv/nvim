@@ -17,6 +17,9 @@ Plugin 'tpope/vim-fugitive'
 " easymotion lets me move faster in vim
 Plugin 'easymotion/vim-easymotion'
 
+Plugin 'junegunn/vim-easy-align'
+
+Plugin 'jamespeapen/Nvim-R'
 
 " Snippets are separated from the engine. Add this if you want them:
 " " For vsnip users.
@@ -105,6 +108,11 @@ nmap <c-+> :ZoomIn<CR>
 nmap <c-=> :ZoomOut<CR>
 
 
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 nnoremap <silent> <F11> :set spell!<cr>
 inoremap <silent> <F11> <C-O>:set spell!<cr>
@@ -131,6 +139,10 @@ let g:neovide_transparency=0.8
 set title
 " configure title to look like: Vim /path/to/file
 set titlestring=SV:\ %-25.55F\ %a%r%m titlelen=70
+
+
+" Bookdown rendering
+map <silent> <LocalLeader>kb :call g:SendCmdToR("bookdown::render_book('.')")<CR>
 
 let g:grammarous#languagetool_cmd = 'languagetool'
 nmap <leader>x <Plug>(grammarous-close-info-window)
