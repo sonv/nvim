@@ -17,6 +17,11 @@ Plugin 'tpope/vim-fugitive'
 " easymotion lets me move faster in vim
 Plugin 'easymotion/vim-easymotion'
 
+Plugin 'junegunn/vim-easy-align'
+
+
+
+Plugin 'jamespeapen/Nvim-R'
 
 " Snippets are separated from the engine. Add this if you want them:
 " " For vsnip users.
@@ -60,6 +65,8 @@ Plugin 'preservim/nerdtree'
 
 ""linter
 Plugin 'dense-analysis/ale'
+"Plugin 'rhysd/vim-grammarous'
+
 
 " Theme                 
 Plugin 'haishanh/night-owl.vim'
@@ -103,6 +110,11 @@ nmap <c-+> :ZoomIn<CR>
 nmap <c-=> :ZoomOut<CR>
 
 
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 nnoremap <silent> <F11> :set spell!<cr>
 inoremap <silent> <F11> <C-O>:set spell!<cr>
@@ -115,11 +127,6 @@ inoremap <expr> <CR>
     \ ? "\<CR>\<C-d>\<C-o>O" : "\<CR>"
 
 
-"" Overleaf username
-let g:AirLatexUsername="cookies:overleaf_session2=s%3A_5uJQCTlhxpSR84cVtqwE97EQ4Z4am8z.WqxEhKVMWkgu6jXTlNo8cc8DB4X2i%2B%2Br2ActouNDqYg"
-"let g:AirLatexUsername="tsvan@upenn.edu"
-let g:AirLatexLogLevel="DEBUG"
-nmap <leader>a :AirLatex<CR>
 
 "" neovide
 let g:neovide_transparency=0.8
@@ -130,3 +137,20 @@ set title
 " configure title to look like: Vim /path/to/file
 set titlestring=SV:\ %-25.55F\ %a%r%m titlelen=70
 
+
+" Bookdown rendering
+map <silent> <LocalLeader>kb :call g:SendCmdToR("bookdown::render_book('.')")<CR>
+
+let g:grammarous#languagetool_cmd = 'languagetool'
+nmap <leader>x <Plug>(grammarous-close-info-window)
+nmap <c-p> <Plug>(grammarous-move-to-previous-error)
+let g:grammarous#disabled_rules = {
+    \ '*' : ['WHITESPACE_RULE', 'EN_QUOTES', 'ARROWS', 'SENTENCE_WHITESPACE',
+    \        'WORD_CONTAINS_UNDERSCORE', 'COMMA_PARENTHESIS_WHITESPACE',
+    \        'EN_UNPAIRED_BRACKETS', 'UPPERCASE_SENTENCE_START',
+    \        'ENGLISH_WORD_REPEAT_BEGINNING_RULE', 'DASH_RULE', 'PLUS_MINUS',
+    \        'PUNCTUATION_PARAGRAPH_END', 'MULTIPLICATION_SIGN', 'PRP_CHECKOUT',
+    \        'CAN_CHECKOUT', 'SOME_OF_THE', 'DOUBLE_PUNCTUATION', 'HELL',
+    \        'CURRENCY', 'POSSESSIVE_APOSTROPHE', 'ENGLISH_WORD_REPEAT_RULE',
+    \        'NON_STANDARD_WORD'],
+    \ }

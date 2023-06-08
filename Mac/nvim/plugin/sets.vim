@@ -20,7 +20,7 @@ set incsearch
 
 set colorcolumn=80
 
-set scrolloff=8
+set scrolloff=20
 set mouse=a
 
 set spelllang=en

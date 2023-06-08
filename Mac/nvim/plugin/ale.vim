@@ -1,6 +1,7 @@
+let b:ale_linter_aliases = ['tex', 'text']
 let g:ale_linters = {
-    \ 'tex': ['proselint'],
-    \ 'markdown': ['proselint'],
+    \ 'tex': ['languagetool'],
+    \ 'markdown': ['languagetool'],
     \ }
 
 let g:ale_lint_on_save = 1
