@@ -12,9 +12,5 @@ else
       ;;
     2)
       cp ~/lib/LaTexStyle/newfile.tex "${name}.tex"
-      cp ~/lib/LaTexStyle/newfile-printfriendly.tex "${name}-printfriendly.tex"
-      cp ~/lib/LaTexStyle/newfile-tablet.tex "${name}-tablet.tex"
-      cp ~/lib/LaTexStyle/newfile-publish.tex "${name}-publish.tex"
-      ;;
   esac
 fi
