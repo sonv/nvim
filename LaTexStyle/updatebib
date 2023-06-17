@@ -1,5 +1,4 @@
 #!/bin/zsh
-cp ~/Work/BibliographySource/bibliography.bib ~/lib/LaTexStyle/bibliography.bib
 cp ~/Work/BibliographySource/bibliography.bib ./
 cd ~/Work/BibliographySource 
 git commit -a
