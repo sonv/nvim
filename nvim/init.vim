@@ -124,13 +124,6 @@ inoremap <expr> <CR>
     \ getline('.')[col('.')-1]=='}'
     \ ? "\<CR>\<C-d>\<C-o>O" : "\<CR>"
 
-
-"" Overleaf username
-let g:AirLatexUsername="cookies:overleaf_session2=s%3A_5uJQCTlhxpSR84cVtqwE97EQ4Z4am8z.WqxEhKVMWkgu6jXTlNo8cc8DB4X2i%2B%2Br2ActouNDqYg"
-"let g:AirLatexUsername="tsvan@upenn.edu"
-let g:AirLatexLogLevel="DEBUG"
-nmap <leader>a :AirLatex<CR>
-
 "" neovide
 let g:neovide_transparency=0.8
 

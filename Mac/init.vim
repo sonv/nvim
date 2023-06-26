@@ -15,16 +15,17 @@ Plug 'easymotion/vim-easymotion'
 
 " Snippets are separated from the engine. Add this if you want them:
 " " For vsnip users.
-Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+
+
 
 " Snippets that help me complete.
 Plug 'rafamadriz/friendly-snippets'
 
 " For luasnip users.
-"Plug 'L3MON4D3/LuaSnip'
-"Plug 'saadparwaiz1/cmp_luasnip'
-
+" follow latest release and install jsregexp.
+Plug 'L3MON4D3/LuaSnip', {'tag': 'v1.*', 'do': 'make install_jsregexp'} " Replace <CurrentMajor> by the latest released major (first number of latest release)
 
 Plug 'vim-airline/vim-airline'
 
@@ -44,11 +45,13 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 
 "" completion
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
+"Plug 'hrsh7th/cmp-nvim-lsp'
+"Plug 'hrsh7th/cmp-buffer'
+"Plug 'hrsh7th/cmp-path'
+"Plug 'hrsh7th/cmp-cmdline'
+"Plug 'hrsh7th/nvim-cmp'
+Plug 'jayli/vim-easycomplete'
+Plug 'SirVer/ultisnips'
 
 "" nerdtree
 Plug 'preservim/nerdtree'
@@ -63,9 +66,6 @@ Plug 'projekt0n/github-nvim-theme'
 Plug 'folke/tokyonight.nvim'
 
 "Plug 'glacambre/firenvim'
-
-" vim on overleaf
-Plug 'da-h/AirLatex.vim'
 
 
 
@@ -90,7 +90,7 @@ hi Normal ctermbg=NONE guibg=NONE
 
 
 "' type dts for timestamp
-iab <expr> dts strftime("%Y-%m-%d")
+""iab <expr> dts strftime("%Y-%m-%d")
 
 "" set up vim-gui-zoom
 set guifont=Hack:h12
@@ -110,11 +110,6 @@ inoremap <expr> <CR>
     \ ? "\<CR>\<C-d>\<C-o>O" : "\<CR>"
 
 
-"" Overleaf username
-let g:AirLatexUsername="cookies:overleaf_session2=s%3A_5uJQCTlhxpSR84cVtqwE97EQ4Z4am8z.WqxEhKVMWkgu6jXTlNo8cc8DB4X2i%2B%2Br2ActouNDqYg"
-"let g:AirLatexUsername="tsvan@upenn.edu"
-let g:AirLatexLogLevel="DEBUG"
-nmap <leader>a :AirLatex<CR>
 
 "" neovide
 let g:neovide_transparency=0.8
