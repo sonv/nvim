@@ -1,0 +1,139 @@
+conky.config = {
+    alignment = 'top_right',
+    use_xft = true,
+    xftalpha = 0.8,
+    font = 'Noto:normal:size=10',
+    text_buffer_size = 2048,
+    update_interval = 1.0,
+    total_run_times = 0,
+    background = true,
+    double_buffer = true,
+    no_buffers = true,
+    imlib_cache_size = 0,
+    cpu_avg_samples = 2,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_transparent = false,
+    own_window_type = 'normal',
+    own_window_hints = 'undecorated,below,skip_taskbar,sticky,skip_pager',
+    own_window_colour = '#000000',
+    draw_shades = false,
+    default_shade_color = '#000000',
+    draw_outline = false,
+    default_outline_color = '#000000',
+    draw_borders = false,
+    gap_x = 5,
+    gap_y = 5,
+    minimum_height = 1000,
+    minimum_width = 275,
+    draw_graph_borders = true,
+    show_graph_scale = false,
+    show_graph_range = false,
+    short_units = true,
+    override_utf8_locale = true,
+    uppercase = false,
+    default_color = '#ffffff',
+    color1 = 'c6396b',
+    color2 = 'fc8c3b',
+    color3 = 'f9e30f',
+    color4 = '4291e2',
+    color5 = '161925',
+    color6 = '3bf4bb',
+    use_spacer = 'none',
+    hddtemp_host = "127.0.0.1",
+    hddtemp_port = "7634",
+}
+ 
+conky.text = [[
+# Time & Date
+${alignc}${font Terminus(TTF):size=16}${color}${time %I:%M:%S%P}
+${alignc}${font Terminus(TTF):bold:size=14}${color}${time %A %B %e, %Y}
+# Desktop
+${goto 5}${font Noto:bold:size=12}HYPATIA${font} ${color4}${stippled_hr 2}
+#
+${goto 5}${color}Display:${alignr}${color2}xfce ${execi 65000 neofetch --stdout | grep "DE:" | awk '{print $3'}}
+${goto 5}${color}Uptime:${color2}${alignr}$uptime
+#
+#Processor section
+${goto 5}${color}${font Noto:bold:size=11}CPU ${color4} ${stippled_hr 2}
+${goto 7}${color6}${font}${execi 65000 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //' | sed -e 's/Processor//'  | sed -e 's/(tm)/™/' | sed -e 's/(R)//' | sed -e 's/CPU//' | sed -e 's/@/:/' | sed -e 's/\ \ //' | sed -e 's/[0-9].[0-9][0-9]GHz//' | uniq}${color}@ ${color6}${freq_g 0}GHz
+# Cores
+${goto 5}${voffset 5}${color}${font Noto:normal:size=10}C1: ${color2}${cpu cpu1}%${goto 70}${color1}${freq 1}Mhz${color}${goto 155}C2: ${color2}${cpu cpu2}%${goto 218}${color1}${freq 2}Mhz
+${color}${goto 10}Thermal: ${color6}${exec sensors|grep -w 'Core 0'|awk '{print $3}'}${goto 160} ${color}Thermal: ${color6}${exec sensors|grep -w 'Core 4'|awk '{print $3}'}
+${goto 5}${color5}${cpugraph cpu1 15,120 fc8c3b c6396b -t} ${goto 155}${color5}${cpugraph cpu2 15,120 fc8c3b c6396b -t}
+${goto 5}${color}C3: ${color2}${cpu cpu3}%${goto 70}${color1}${freq 3}Mhz${color}${goto 155}C4: ${color2}${cpu cpu4}%${goto 218}${color1}${freq 4}Mhz
+${color}${goto 10}Thermal: ${color6}${exec sensors|grep -w 'Core 8'|awk '{print $3}'}${goto 160} ${color}Thermal: ${color6}${exec sensors|grep -w 'Core 12'|awk '{print $3}'}
+${goto 5}${color5}${cpugraph cpu3 15,120 fc8c3b c6396b -t} ${goto 150}${color5}${cpugraph cpu4 15,120 fc8c3b c6396b -t}
+${goto 5}${color}C5: ${color2}${cpu cpu5}%${goto 70}${color1}${freq 5}Mhz${color}${goto 155}C6: ${color2}${cpu cpu6}%${goto 218}${color1}${freq 6}Mhz
+${color}${goto 10}Thermal: ${color6}${exec sensors|grep -w 'Core 16'|awk '{print $3}'}${goto 160} ${color}Thermal: ${color6}${exec sensors|grep -w 'Core 20'|awk '{print $3}'}
+${goto 5}${color5}${cpugraph cpu5 15,120 fc8c3b c6396b -t} ${goto 150}${color5}${cpugraph cpu6 15,120 fc8c3b c6396b -t}
+${goto 5}${color}C7: ${color2}${cpu cpu7}%${goto 70}${color1}${freq 7}Mhz${color}${goto 155}C8: ${color2}${cpu cpu8}%${goto 218}${color1}${freq 8}Mhz
+${color}${goto 10}Thermal: ${color6}${exec sensors|grep -w 'Core 24'|awk '{print $3}'}${goto 160} ${color}Thermal: ${color6}${exec sensors|grep -w 'Core 28'|awk '{print $3}'}
+${goto 5}${color5}${cpugraph cpu7 15,120 fc8c3b c6396b -t} ${goto 150}${color5}${cpugraph cpu8 15,120 fc8c3b c6396b -t}
+${goto 5}${color}C9: ${color2}${cpu cpu7}%${goto 70}${color1}${freq 7}Mhz${color}${goto 155}C10: ${color2}${cpu cpu8}%${goto 218}${color1}${freq 8}Mhz
+${color}${goto 10}Thermal: ${color6}${exec sensors|grep -w 'Core 32'|awk '{print $3}'}${goto 160} ${color}Thermal: ${color6}${exec sensors|grep -w 'Core 33'|awk '{print $3}'}
+${goto 5}${color5}${cpugraph cpu9 15,120 fc8c3b c6396b -t} ${goto 150}${color5}${cpugraph cpu10 15,120 fc8c3b c6396b -t}
+${goto 5}${color}C11: ${color2}${cpu cpu11}%${goto 70}${color1}${freq 7}Mhz${color}${goto 155}C12: ${color2}${cpu cpu12}%${goto 218}${color1}${freq 8}Mhz
+${color}${goto 10}Thermal: ${color6}${exec sensors|grep -w 'Core 34'|awk '{print $3}'}${goto 160} ${color}Thermal: ${color6}${exec sensors|grep -w 'Core 35'|awk '{print $3}'}
+${goto 5}${color5}${cpugraph cpu11 15,120 fc8c3b c6396b -t} ${goto 150}${color5}${cpugraph cpu12 15,120 fc8c3b c6396b -t}
+${goto 5}${color}C13: ${color2}${cpu cpu13}%${goto 70}${color1}${freq 7}Mhz${color}${goto 155}C14: ${color2}${cpu cpu14}%${goto 218}${color1}${freq 8}Mhz
+${color}${goto 10}Thermal: ${color6}${exec sensors|grep -w 'Core 36'|awk '{print $3}'}${goto 160} ${color}Thermal: ${color6}${exec sensors|grep -w 'Core 37'|awk '{print $3}'}
+${goto 5}${color5}${cpugraph cpu13 15,120 fc8c3b c6396b -t} ${goto 150}${color5}${cpugraph cpu14 15,120 fc8c3b c6396b -t}
+${goto 5}${color}C15: ${color2}${cpu cpu15}%${goto 70}${color1}${freq 7}Mhz${color}${goto 155}C16: ${color2}${cpu cpu16}%${goto 218}${color1}${freq 8}Mhz
+${color}${goto 10}Thermal: ${color6}${exec sensors|grep -w 'Core 38'|awk '{print $3}'}${goto 160} ${color}Thermal: ${color6}${exec sensors|grep -w 'Core 39'|awk '{print $3}'}
+${goto 5}${color5}${cpugraph cpu15 15,120 fc8c3b c6396b -t} ${goto 150}${color5}${cpugraph cpu16 15,120 fc8c3b c6396b -t}
+${goto 5}${color}C17: ${color2}${cpu cpu17}%${goto 70}${color1}${freq 7}Mhz${color}${goto 155}C18: ${color2}${cpu cpu18}%${goto 218}${color1}${freq 8}Mhz
+${color}${goto 10}Thermal: ${color6}${exec sensors|grep -w 'Core 40'|awk '{print $3}'}${goto 160} ${color}Thermal: ${color6}${exec sensors|grep -w 'Core 41'|awk '{print $3}'}
+${goto 5}${color5}${cpugraph cpu17 15,120 fc8c3b c6396b -t} ${goto 150}${color5}${cpugraph cpu18 15,120 fc8c3b c6396b -t}
+${goto 5}${color}C19: ${color2}${cpu cpu19}%${goto 70}${color1}${freq 7}Mhz${color}${goto 155}C20: ${color2}${cpu cpu20}%${goto 218}${color1}${freq 8}Mhz
+${color}${goto 10}Thermal: ${color6}${exec sensors|grep -w 'Core 42'|awk '{print $3}'}${goto 160} ${color}Thermal: ${color6}${exec sensors|grep -w 'Core 43'|awk '{print $3}'}
+${goto 5}${color5}${cpugraph cpu19 15,120 fc8c3b c6396b -t} ${goto 150}${color5}${cpugraph cpu20 15,120 fc8c3b c6396b -t}
+${goto 5}${color}C21: ${color2}${cpu cpu21}%${goto 70}${color1}${freq 7}Mhz${color}${goto 155}C22: ${color2}${cpu cpu22}%${goto 218}${color1}${freq 8}Mhz
+${color}${goto 10}Thermal: ${color6}${exec sensors|grep -w 'Core 44'|awk '{print $3}'}${goto 160} ${color}Thermal: ${color6}${exec sensors|grep -w 'Core 45'|awk '{print $3}'}
+${goto 5}${color5}${cpugraph cpu21 15,120 fc8c3b c6396b -t} ${goto 150}${color5}${cpugraph cpu22 15,120 fc8c3b c6396b -t}
+${goto 5}${color}C23: ${color2}${cpu cpu23}%${goto 70}${color1}${freq 7}Mhz${color}${goto 155}C24: ${color2}${cpu cpu24}%${goto 218}${color1}${freq 8}Mhz
+${color}${goto 10}Thermal: ${color6}${exec sensors|grep -w 'Core 46'|awk '{print $3}'}${goto 160} ${color}Thermal: ${color6}${exec sensors|grep -w 'Core 47'|awk '{print $3}'}
+${goto 5}${color5}${cpugraph cpu23 15,120 fc8c3b c6396b -t} ${goto 150}${color5}${cpugraph cpu24 15,120 fc8c3b c6396b -t}
+${goto 5}${color}C25: ${color2}${cpu cpu25}%${goto 70}${color1}${freq 7}Mhz${color}${goto 155}C26: ${color2}${cpu cpu26}%${goto 218}${color1}${freq 8}Mhz
+${goto 5}${color5}${cpugraph cpu25 15,120 fc8c3b c6396b -t} ${goto 150}${color5}${cpugraph cpu26 15,120 fc8c3b c6396b -t}
+${goto 5}${color}C27: ${color2}${cpu cpu27}%${goto 70}${color1}${freq 7}Mhz${color}${goto 155}C28: ${color2}${cpu cpu28}%${goto 218}${color1}${freq 8}Mhz
+${goto 5}${color5}${cpugraph cpu27 15,120 fc8c3b c6396b -t} ${goto 150}${color5}${cpugraph cpu28 15,120 fc8c3b c6396b -t}
+${goto 5}${color}C29: ${color2}${cpu cpu29}%${goto 70}${color1}${freq 7}Mhz${color}${goto 155}C30: ${color2}${cpu cpu30}%${goto 218}${color1}${freq 8}Mhz
+${goto 5}${color5}${cpugraph cpu29 15,120 fc8c3b c6396b -t} ${goto 150}${color5}${cpugraph cpu30 15,120 fc8c3b c6396b -t}
+${goto 5}${color}C31: ${color2}${cpu cpu31}%${goto 70}${color1}${freq 7}Mhz${color}${goto 155}C32: ${color2}${cpu cpu32}%${goto 218}${color1}${freq 8}Mhz
+${goto 5}${color5}${cpugraph cpu31 15,120 fc8c3b c6396b -t} ${goto 150}${color5}${cpugraph cpu32 15,120 fc8c3b c6396b -t}
+# Temperature
+#
+# CPU Fan
+#${goto 5}${color}${font Noto:bold:size=11}Cpu Fan ${font} ${color4}${stippled_hr 2}
+#${goto 5}${color}Cpu Fan:${alignr}${color2}${execi 2 sensors nct6798-isa-0290| awk '/fan2/{ printf "%2.f\n" , $2 ; exit}'} rpm
+#${goto 5}${color}Case Fan:${alignr}${color2}${execi 2 sensors nct6798-isa-0290| awk '/fan4/{ printf "%2.f\n" , $2 ; exit}'} rpm
+# RAM
+${goto 5}${color}${font Noto:bold:size=11}RAM ${font} ${color4}${stippled_hr 2}
+${goto 5}${color}Used: ${color6}${mem} - ${memperc}% ${goto 175}${color}Total: 128GB 
+${alignc}${color2}${membar 7,260}
+# SWAP
+${goto 5}${color}${font Noto:bold:size=11}SWAP ${font} ${color4}${stippled_hr 2}
+${goto 5}${color}Used: ${color6}${swap}${goto 175}${color}Total: ${color1}${swapmax}
+${alignc}${color2}${swapbar 7,260}
+# GPU Section
+${goto 5}${color}${font Noto:bold:size=11}GPU ${font} ${color4}${stippled_hr 2}
+${alignc}${color}${font}${color6}${execi 65000 nvidia-smi --query-gpu=gpu_name --format=csv,noheader,nounits} ${font}${color}
+#
+${color2}${hr}
+${color}${alignc}Driver: ${color6}${exec nvidia-smi --query-gpu=driver_version --format=csv,noheader}${color}
+#${goto 10}Pwr: ${color6}${execi 1 nvidia-smi -q -i 0 | grep "" | cut -b 14-19} W ${alignr 10}${color}Max Pwr: ${color1}${} W
+${color}${goto 10}GPU Load: ${color6}${execi 1 nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader}${alignr 10}${color}GPU VRAM: ${color6}${execi 1 nvidia-smi --query-gpu=utilization.memory --format=csv,noheader}
+${color7}${goto 10}${execigraph 1 "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader | cut -c 1-2" 20,110 83FF08 FF0883 -t }${alignr 10}${execigraph 1 "nvidia-smi --query-gpu=utilization.memory --format=csv,noheader | cut -c 1-2"  20,110 83FF08 FF0883 -t}
+${goto 10}${color}GPU Spd: ${color6}${execi 1 nvidia-smi --query-gpu=clocks.sm --format=csv,noheader | cut -c 1-4}MHz${alignr 10}${color}VRAM Spd: ${color6}${execi 1 nvidia-smi --query-gpu=clocks.mem --format=csv,noheader | cut -c 1-4}MHz
+${color7}${goto 10}${execigraph 1 "nvidia-smi --query-gpu=clocks.sm --format=csv,noheader | cut -d ' ' -f 1 | sed 's/$/\/1911/' | bc -l | sed 's/$/*100/' | bc | cut -d '.' -f1" 20,110 83FF08 FF0883 -t }${alignr 10}${execigraph 1 "nvidia-smi --query-gpu=clocks.mem --format=csv,noheader | cut -d ' ' -f 1 | sed 's/$/\/3504/' | bc -l | sed 's/$/*100/' | bc | cut -d '.' -f1"  20,110 83FF08 FF0883 -t}
+${color}${alignc}GPU Temp: ${color6}${execi 1 "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader"}°C
+${color7}${goto 10}${execigraph 1 "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader" 20,110 83FF08 FF0883 -t} ${alignr 10}${color4}${execibar 1 20,110 "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader"}
+#
+#Storage
+${voffset -20}${color4}${hr}${color}
+${goto 5}${color}SSD:${goto 185}${color6}${fs_used /}${color}  /  ${color2}${fs_size /}
+#
+]]

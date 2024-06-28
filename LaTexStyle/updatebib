@@ -1,0 +1,5 @@
+#!/bin/zsh
+cp ~/Work/BibliographySource/bibliography.bib ./
+cd ~/Work/BibliographySource 
+git commit -a
+git push

@@ -1,0 +1,6 @@
+set synctex true
+# for vim
+# set synctex-editor-command "nvr --remote-silent %f -c %l"  
+
+## for vscode
+set synctex-editor-command "code -g %{input}:%{line}"
