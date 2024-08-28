@@ -125,7 +125,7 @@ ${alignc}${color}${font}${color6}${execi 65000 nvidia-smi --query-gpu=gpu_name -
 ${color2}${hr}
 ${color}${alignc}Driver: ${color6}${exec nvidia-smi --query-gpu=driver_version --format=csv,noheader}${color}
 #${goto 10}Pwr: ${color6}${execi 1 nvidia-smi -q -i 0 | grep "" | cut -b 14-19} W ${alignr 10}${color}Max Pwr: ${color1}${} W
-${color}${goto 10}GPU Load: ${color6}${execi 1 nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader}${alignr 10}${color}GPU VRAM: ${color6}${execi 1 nvidia-smi --query-gpu=utilization.memory --format=csv,noheader}
+${color}${goto 10}GPU Load: ${color6}${execi 1 nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader}${alignr 10}${color}GPU VRAM: ${color6}${execi 1 nvidia-smi --query-gpu=memory.used --format=csv,noheader}/${color6}${execi 1 nvidia-smi --query-gpu=memory.total --format=csv,noheader}
 ${color7}${goto 10}${execigraph 1 "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader | cut -c 1-2" 20,110 83FF08 FF0883 -t }${alignr 10}${execigraph 1 "nvidia-smi --query-gpu=utilization.memory --format=csv,noheader | cut -c 1-2"  20,110 83FF08 FF0883 -t}
 ${goto 10}${color}GPU Spd: ${color6}${execi 1 nvidia-smi --query-gpu=clocks.sm --format=csv,noheader | cut -c 1-4}MHz${alignr 10}${color}VRAM Spd: ${color6}${execi 1 nvidia-smi --query-gpu=clocks.mem --format=csv,noheader | cut -c 1-4}MHz
 ${color7}${goto 10}${execigraph 1 "nvidia-smi --query-gpu=clocks.sm --format=csv,noheader | cut -d ' ' -f 1 | sed 's/$/\/1911/' | bc -l | sed 's/$/*100/' | bc | cut -d '.' -f1" 20,110 83FF08 FF0883 -t }${alignr 10}${execigraph 1 "nvidia-smi --query-gpu=clocks.mem --format=csv,noheader | cut -d ' ' -f 1 | sed 's/$/\/3504/' | bc -l | sed 's/$/*100/' | bc | cut -d '.' -f1"  20,110 83FF08 FF0883 -t}
